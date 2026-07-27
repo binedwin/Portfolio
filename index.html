@@ -1742,14 +1742,17 @@
         display: none;
       }
       #p1 .timeline {
-        width: min(100%, 570px);
+        width: 100%;
         margin: 0 auto;
-        grid-template-columns: 1fr;
-        gap: 10px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(3, auto);
+        grid-auto-flow: column;
+        gap: 10px 14px;
+        align-items: stretch;
       }
       #p1 .event {
         text-align: left;
-        grid-template-columns: 68px 1fr;
+        grid-template-columns: 68px minmax(0, 1fr);
         min-height: 82px;
         align-items: center;
         padding: 12px 14px;
@@ -1771,6 +1774,15 @@
         font-weight: 750;
         letter-spacing: -0.02em;
       }
+      #p1 .date.long-date {
+        width: 58px;
+        min-height: 44px;
+        padding: 5px 4px;
+        font-size: 10px;
+        line-height: 1.18;
+        text-align: center;
+        word-break: keep-all;
+      }
       #p1 .event h3 {
         font-size: 14px;
         margin-bottom: 3px;
@@ -1780,8 +1792,8 @@
       }
       #p1 .event .bullets {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 3px 12px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 3px;
       }
       #p1 .event .bullets li {
         margin: 0;
@@ -2029,6 +2041,11 @@
           box-shadow: none;
           padding: 42px 24px 58px;
         }
+        #p1 .timeline {
+          grid-template-columns: 1fr;
+          grid-template-rows: none;
+          grid-auto-flow: row;
+        }
         .profile,
         .row-block,
         .event,
@@ -2179,6 +2196,38 @@
                   </ul>
                 </div>
               </div>
+              <div class="event">
+                <div class="date long-date">병장 만기전역</div>
+                <div>
+                  <h3>제1 지상작전사령부 복무</h3>
+                  <div class="sub">정보통신여단 312통신대대 무선통신병과</div>
+                  <ul class="bullets">
+                    <li>분대장 임무 수행</li>
+                    <li>유격 조교 임무 수행</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="event">
+                <div class="date long-date">아르바이트</div>
+                <div>
+                  <h3>맥도날드 근무</h3>
+                  <div class="sub">고객 경험 리더 GEL로 근무</div>
+                  <ul class="bullets">
+                    <li>(카운터, 그릴, 드라이브스루) 올라운더</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="event">
+                <div class="date long-date">아르바이트</div>
+                <div>
+                  <h3>서점 근무</h3>
+                  <div class="sub">1인 매장 관리</div>
+                  <ul class="bullets">
+                    <li>출판사 담당자 응대</li>
+                    <li>고객 응대</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -2265,6 +2314,7 @@
               <div class="cert-list">
                 <div class="cert-item"><b>정보처리기사</b></div>
                 <div class="cert-item"><b>SQLD</b></div>
+                <div class="cert-item"><b>삼성 SW 역량테스트 A형</b></div>
                 <div class="cert-item"><b>운전면허 1종</b></div>
               </div>
             </div>
@@ -2682,15 +2732,6 @@
             </li>
           </ul>
         </section>
-        <section class="mini-section architecture-section">
-          <h3 class="mini-title">시스템 아키텍처</h3>
-          <div class="architecture-image-slot">
-            <img
-              src="image/project2_water_leak_architecture.png"
-              alt="센서 데이터 기반 수도관 누수 지점 분류 파이프라인 아키텍처"
-            />
-          </div>
-        </section>
         <section class="mini-section">
           <h3 class="mini-title">개발 환경</h3>
           <table class="env-table">
@@ -2846,7 +2887,7 @@
           <ul class="bullets overview-summary">
             <li>
               고령층의 기억 회상과 인지 활동을 지원하기 위해 Vision AI로 과거
-              사진을 분석하고 RAG·STT/TTS를 결합한 개인화 대화 흐름을 구현하여,
+              사진을 분석하고 RAG, STT/TTS를 결합한 개인화 대화 흐름을 구현하여,
               사진 기반 회상 대화와 치매 위험도 평가가 가능한 챗봇 서비스를
               완성했습니다.
             </li>
@@ -2887,19 +2928,22 @@
           <table class="env-table">
             <tbody>
               <tr>
-                <td>AI</td>
-                <td>Vision AI, RAG</td>
+                <td>프론트엔드</td>
+                <td>React, TypeScript, Vite</td>
               </tr>
               <tr>
-                <td>음성/HRI</td>
-                <td>STT, TTS, 대화형 사용자 인터페이스</td>
+                <td>백엔드</td>
+                <td>FastAPI, Uvicorn, Python 3.11</td>
               </tr>
               <tr>
-                <td>서비스 로직</td>
+                <td>AI 모델</td>
                 <td>
-                  Memory Input, Personalized Conversation Flow, Dementia Risk
-                  Assessment Logic
+                  Gemini 2.5 Pro, YOLOv8n, CLIP, BLIP, Perplexity API, RAG, Google Cloud STT/TTS
                 </td>
+              </tr>
+              <tr>
+                <td>데이터베이스</td>
+                <td>MySQL</td>
               </tr>
               <tr>
                 <td>성과/근거</td>
@@ -2934,7 +2978,7 @@
           <h3 class="mini-title">담당 역할</h3>
           <ul class="bullets">
             <li>RAG와 Vision AI를 결합한 개인화 챗봇 서비스 흐름 설계 경험</li>
-            <li>고령층의 기억 회상·인지 자극 문제를 구조화하여 서비스 흐름으로 설계</li>
+            <li>고령층의 기억 회상, 인지 자극 문제를 구조화하여 서비스 흐름으로 설계</li>
             <li>멀티모달 입력(이미지 + 텍스트) 처리 구조 구현</li>
             <li>
               치매 위험도 평가 로직과 회상 요법 흐름을 서비스 기능으로 구성한
@@ -2952,7 +2996,7 @@
                 이미지 설명이나 일반 챗봇 응답에만 머물러 있었습니다.
               </p>
               <p>
-                <b>해결:</b> Vision AI로 사진 정보를 분석·재생성하고
+                <b>해결:</b> Vision AI로 사진 정보를 분석, 재생성하고
                 RAG로 개인 기억 맥락을 대화 응답에 연결했습니다.
               </p>
               <p>
@@ -3045,7 +3089,7 @@
           <ul class="bullets">
             <li>
               <b>UML 기반 설계:</b> 요구사항과 사용자 흐름을 분석하고
-              클래스·시퀀스 구조로 서비스 설계
+              클래스, 시퀀스 구조로 서비스 설계
             </li>
             <li>
               <b>얼굴 특징 분석:</b> MediaPipe로 얼굴과 468개 랜드마크를 검출하고
@@ -3140,23 +3184,7 @@
           <h3 class="mini-title">트러블슈팅</h3>
           <div class="trouble-grid">
             <article class="trouble-card">
-              <h3>1. 얼굴 분석과 생성 파이프라인 연결</h3>
-              <p>
-                <b>문제:</b> 얼굴 이미지를 바로 생성형 AI에 전달하면 사용자
-                특징이 일관되게 반영되지 않고 동물상 분류 근거도 약해질 수
-                있었습니다.
-              </p>
-              <p>
-                <b>해결:</b> MediaPipe FaceDetection/FaceMesh, Enhanced ResNet34
-                + Attention/FPN 분류, 9개 정량 특징을 프롬프트에 반영했습니다.
-              </p>
-              <p>
-                <b>배운 점:</b> CV 전처리, 분류 모델, 프롬프트 생성이 연결되어야
-                개인화 생성 결과의 설득력이 높아진다는 점을 배웠습니다.
-              </p>
-            </article>
-            <article class="trouble-card">
-              <h3>2. 생성형 AI 대기 시간</h3>
+              <h3>1. 생성형 AI 대기 시간</h3>
               <p>
                 <b>문제:</b> 현장 키오스크에서 결과 이미지 생성이 오래 걸리면
                 사용자가 이탈하고 운영 흐름이 막힐 수 있었습니다.
@@ -3171,7 +3199,7 @@
               </p>
             </article>
             <article class="trouble-card">
-              <h3>3. 공유와 만료 정책</h3>
+              <h3>2. 공유와 만료 정책</h3>
               <p>
                 <b>문제:</b> 축제 현장에서 결과를 다시 확인하거나 공유하려면
                 QR/링크가 필요하지만 저장 데이터를 무기한 유지하면 운영 부담이
@@ -3187,25 +3215,9 @@
               </p>
             </article>
             <article class="trouble-card">
-              <h3>4. UML 설계와 구현 간 간극</h3>
+              <h3>3. 축제 현장 조명으로 인한 Vision 인식 불안정</h3>
               <p>
-                <b>문제:</b> 요구사항, 화면 흐름, API 구조가 정리되지 않으면
-                프론트엔드와 백엔드 연동이 흔들릴 수 있었습니다.
-              </p>
-              <p>
-                <b>해결:</b> UML 기반 요구사항, Use Case, Sequence, Class 구조를
-                먼저 정리하고 Flask REST API, Vite React 화면 흐름, API 문서로
-                연결했습니다.
-              </p>
-              <p>
-                <b>배운 점:</b> 설계 문서는 형식이 아니라 팀 구현 속도와 오류
-                감소를 위한 기준점이라는 점을 배웠습니다.
-              </p>
-            </article>
-            <article class="trouble-card">
-              <h3>5. 축제 현장 조명으로 인한 Vision 인식 불안정</h3>
-              <p>
-                <b>문제:</b> 축제 현장의 조도·색온도 변화로 얼굴 랜드마크 인식 정확도가 저하되었습니다.
+                <b>문제:</b> 축제 현장의 조도, 색온도 변화로 얼굴 랜드마크 인식 정확도가 저하되었습니다.
               </p>
               <p>
                 <b>해결:</b> RGB 이미지를 Grayscale로 변환해 색 노이즈를 줄이고 명암 기반 특징에 집중하도록 전처리를 진행하였습니다.
