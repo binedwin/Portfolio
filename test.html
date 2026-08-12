@@ -1,10 +1,10 @@
 <!doctype html>
-<!-- Portfolio document with embedded skill icons and external project images. -->
+<!-- Alternative web-first portfolio design. -->
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>이정빈 포트폴리오 | Robot Software Developer</title>
+    <title>이정빈 | Robot Software Developer</title>
     <style>
       @page { size: A4; margin: 0; }
       :root {
@@ -2074,7 +2074,465 @@
         color: #0f766e;
       }
 
-      @media (max-width: 840px) {
+      /* TEST DESIGN: web-first engineering casebook */
+      @media screen {
+        :root {
+          --case-ink: #0b1220;
+          --case-text: #334155;
+          --case-muted: #64748b;
+          --case-line: #dbe3ee;
+          --case-blue: #2563eb;
+          --case-orange: #f97316;
+          --case-bg: #f2f5fa;
+        }
+        html {
+          scroll-padding-top: 76px;
+          background: var(--case-bg);
+        }
+        body {
+          font-size: 15px;
+          line-height: 1.7;
+          color: var(--case-text);
+          background:
+            radial-gradient(circle at 8% 0%, rgba(37, 99, 235, 0.1), transparent 28rem),
+            radial-gradient(circle at 94% 20%, rgba(249, 115, 22, 0.07), transparent 24rem),
+            var(--case-bg);
+        }
+        .toolbar {
+          background: rgba(255, 255, 255, 0.9);
+          border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+          box-shadow: none;
+        }
+        .toolbar-inner {
+          width: min(1160px, calc(100% - 48px));
+          min-height: 64px;
+          padding: 0;
+          font-size: 13px;
+        }
+        .toolbar strong {
+          color: var(--case-ink);
+          font-size: 14px;
+          font-weight: 750;
+        }
+        .toolbar a {
+          color: #475569;
+          margin-left: 22px;
+        }
+        .toolbar a:hover {
+          color: var(--case-blue);
+        }
+        .book {
+          width: min(1160px, calc(100% - 48px));
+          margin: 0 auto;
+          padding: 48px 0 96px;
+        }
+        .page {
+          width: 100%;
+          min-height: 0;
+          margin: 0 auto 28px;
+          padding: 64px 72px;
+          overflow: visible;
+          border-radius: 28px;
+          background: rgba(255, 255, 255, 0.96);
+          box-shadow:
+            0 0 0 1px rgba(148, 163, 184, 0.18),
+            0 24px 70px -52px rgba(15, 23, 42, 0.48);
+          scroll-margin-top: 86px;
+        }
+        .page::before {
+          display: none;
+        }
+        .page-number {
+          display: none;
+        }
+        #p1 {
+          padding: 0 0 64px;
+          overflow: hidden;
+        }
+        #p1 .profile {
+          grid-template-columns: 150px minmax(0, 1fr);
+          gap: 36px;
+          margin: 0 0 44px;
+          padding: 64px 72px 54px;
+          border-radius: 0;
+          color: #ffffff;
+          background:
+            radial-gradient(circle at 88% 0%, rgba(59, 130, 246, 0.34), transparent 34%),
+            linear-gradient(135deg, #0b1220 0%, #111d35 58%, #17336c 100%);
+          box-shadow: none;
+        }
+        #p1 .photo {
+          width: 150px;
+          height: 184px;
+          border-radius: 20px;
+          background: #ffffff;
+          box-shadow: 0 20px 50px -28px rgba(0, 0, 0, 0.8);
+        }
+        #p1 .photo img {
+          object-fit: cover;
+          object-position: center 15%;
+        }
+        .profile-kicker {
+          margin-bottom: 12px;
+          color: #93c5fd;
+          font-size: 12px;
+          font-weight: 750;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+        }
+        #p1 h1 {
+          color: #ffffff;
+          font-size: clamp(42px, 5vw, 64px);
+          line-height: 0.98;
+          letter-spacing: -0.065em;
+        }
+        #p1 .role {
+          margin: 14px 0 12px;
+          color: #bfdbfe;
+          font-size: 17px;
+        }
+        #p1 .intro {
+          max-width: 660px;
+          color: #dbe7f7;
+          font-size: 16px;
+        }
+        #p1 .contact {
+          margin-top: 18px;
+        }
+        #p1 .contact span {
+          background: rgba(255, 255, 255, 0.08);
+          box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+          border-radius: 999px;
+          padding: 7px 12px;
+        }
+        #p1 .contact b,
+        #p1 .contact a {
+          color: #ffffff;
+        }
+        .hero-stats {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 12px;
+          margin: -70px 72px 48px 258px;
+          position: relative;
+          z-index: 1;
+        }
+        .hero-stat {
+          min-height: 94px;
+          padding: 18px;
+          border-radius: 18px;
+          background: #ffffff;
+          box-shadow:
+            0 0 0 1px rgba(148, 163, 184, 0.2),
+            0 18px 40px -30px rgba(15, 23, 42, 0.55);
+        }
+        .hero-stat strong {
+          display: block;
+          color: var(--case-ink);
+          font-size: 23px;
+          line-height: 1.15;
+          letter-spacing: -0.04em;
+        }
+        .hero-stat span {
+          color: var(--case-muted);
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+        }
+        #p1 > .section {
+          padding: 0 72px;
+        }
+        .section-title,
+        .section-title.teal,
+        .section-title.purple {
+          margin-bottom: 24px;
+          padding: 0 0 13px;
+          color: var(--case-ink);
+          font-size: 22px;
+          letter-spacing: -0.035em;
+          text-transform: none;
+          background: none;
+          border-bottom: 1px solid var(--case-line);
+        }
+        .section-title::after {
+          width: 72px;
+          height: 3px;
+          margin-top: 12px;
+          background: linear-gradient(90deg, var(--case-blue), #60a5fa);
+        }
+        #p1 .timeline {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          grid-template-rows: none;
+          grid-auto-flow: row;
+          gap: 12px;
+        }
+        #p1 .event {
+          display: grid;
+          grid-template-columns: 62px minmax(0, 1fr);
+          min-height: 132px;
+          padding: 18px;
+          align-items: start;
+          border-radius: 16px;
+          background: #f8fafc;
+          box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2);
+        }
+        #p1 .date,
+        #p1 .date.long-date {
+          float: none;
+          width: 52px;
+          min-height: 34px;
+          margin: 0;
+          padding: 6px;
+          background: #eaf1ff;
+          color: #1d4ed8;
+          font-size: 10px;
+        }
+        #p1 .event h3 {
+          font-size: 14px;
+        }
+        #p1 .event .sub {
+          color: #475569;
+        }
+        #p1 .awards-cert-box {
+          grid-template-columns: minmax(0, 1fr) 220px;
+          gap: 18px;
+          padding: 0;
+          background: none;
+          box-shadow: none;
+        }
+        #p1 .awards-panel,
+        #p1 .cert-panel {
+          padding: 20px;
+          background: #f8fafc;
+          box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2);
+        }
+        #p2 .section:first-child p {
+          display: inline-block;
+          width: calc(50% - 10px);
+          margin: 0 16px 10px 0;
+          padding: 18px;
+          vertical-align: top;
+          border-radius: 16px;
+          background: #f8fafc;
+          box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2);
+        }
+        #p2 .section:first-child p:last-child {
+          margin-right: 0;
+        }
+        #p2 .project-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 14px;
+        }
+        #p2 .project-row {
+          min-height: 170px;
+          padding: 20px;
+          border-radius: 18px;
+          background: #ffffff;
+          box-shadow:
+            inset 0 0 0 1px rgba(148, 163, 184, 0.22),
+            0 18px 42px -38px rgba(15, 23, 42, 0.55);
+        }
+        #p2 .project-row:first-child {
+          grid-column: 1 / -1;
+          min-height: 0;
+          background: linear-gradient(135deg, #eef4ff, #ffffff);
+        }
+        #p2 .project-main h3 {
+          font-size: 16px;
+        }
+        #p2 .project-main p {
+          font-size: 13px;
+        }
+        #p2 .ppt-skill-board {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px;
+        }
+        #p2 .ppt-skill-col {
+          display: contents;
+        }
+        #p2 .ppt-skill-item,
+        #p2 .ppt-skill-board .ppt-skill-col:nth-child(2) .ppt-skill-item {
+          min-height: 190px;
+          padding: 18px;
+          align-items: start;
+          border-radius: 18px;
+          background: #f8fafc;
+          box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2);
+        }
+        #p2 .ppt-skill-board .ppt-skill-col:nth-child(2) .ppt-skill-icon {
+          margin-top: 2px;
+        }
+        #p2 .ppt-skill-desc {
+          font-size: 11.5px;
+          line-height: 1.6;
+        }
+        #p3,
+        #p5,
+        #p7,
+        #p9,
+        #p11 {
+          margin-bottom: 0;
+          padding-bottom: 34px;
+          border-radius: 28px 28px 0 0;
+          box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.18);
+        }
+        #p4,
+        #p6,
+        #p8,
+        #p10,
+        #p12 {
+          margin-top: -1px;
+          margin-bottom: 48px;
+          padding-top: 10px;
+          border-radius: 0 0 28px 28px;
+          box-shadow:
+            0 1px 0 rgba(148, 163, 184, 0.18) inset,
+            0 0 0 1px rgba(148, 163, 184, 0.18),
+            0 26px 70px -52px rgba(15, 23, 42, 0.58);
+        }
+        .project-hero {
+          position: relative;
+          margin-bottom: 26px;
+          padding: 42px 44px;
+          overflow: hidden;
+          border-radius: 22px;
+          background:
+            radial-gradient(circle at 86% 0%, rgba(96, 165, 250, 0.38), transparent 28%),
+            linear-gradient(135deg, #0b1220, #18366f) !important;
+          box-shadow: none;
+        }
+        #p5 .project-hero {
+          background: linear-gradient(135deg, #0b1220, #115e59) !important;
+        }
+        #p7 .project-hero {
+          background: linear-gradient(135deg, #0b1220, #9a3412) !important;
+        }
+        #p9 .project-hero {
+          background: linear-gradient(135deg, #0b1220, #5b21b6) !important;
+        }
+        #p11 .project-hero {
+          background: linear-gradient(135deg, #0b1220, #075985) !important;
+        }
+        .project-hero small {
+          color: #93c5fd;
+          font-size: 11px;
+        }
+        .project-hero h2 {
+          max-width: 820px;
+          margin-bottom: 12px;
+          color: #ffffff;
+          font-size: clamp(30px, 4vw, 46px);
+          line-height: 1.12;
+        }
+        .project-hero p {
+          max-width: 760px;
+          color: #dbeafe;
+          font-size: 16px;
+        }
+        .meta {
+          grid-template-columns: repeat(3, max-content);
+          gap: 10px;
+          margin: 0 0 8px 0 !important;
+          padding: 0;
+          border: 0;
+        }
+        .meta div {
+          padding: 8px 12px !important;
+          border-radius: 999px;
+          background: #f1f5f9 !important;
+          box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2) !important;
+        }
+        .page:not(#p1):not(#p2) .mini-section {
+          margin: 0;
+          padding: 30px 0;
+          border-radius: 0;
+          border-top: 1px solid var(--case-line);
+          background: transparent;
+          box-shadow: none;
+        }
+        .page:not(#p1):not(#p2) .mini-section + .mini-section {
+          margin-top: 0;
+        }
+        .page:not(#p1):not(#p2) .mini-title {
+          margin-bottom: 18px;
+          color: var(--case-ink);
+          font-size: 19px;
+        }
+        .page:not(#p1):not(#p2) .bullets {
+          gap: 9px;
+        }
+        .page:not(#p1):not(#p2) .bullets li {
+          padding: 12px 14px 12px 26px;
+          line-height: 1.6;
+          background: #f8fafc;
+          box-shadow: inset 3px 0 0 rgba(37, 99, 235, 0.42);
+        }
+        .page:not(#p1):not(#p2) .bullets li::before {
+          left: 12px;
+          top: 15px;
+        }
+        .architecture-image-slot {
+          aspect-ratio: auto;
+          min-height: 300px;
+          padding: 18px;
+          border-radius: 18px;
+          background: #ffffff;
+          box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.22);
+        }
+        .architecture-image-slot img {
+          max-height: 540px;
+        }
+        .project-image-grid {
+          gap: 18px;
+        }
+        .project-image-slot {
+          border-radius: 18px;
+          box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.22);
+        }
+        .trouble-grid {
+          gap: 14px;
+        }
+        .page:not(#p1):not(#p2) .trouble-card {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 10px 14px;
+          padding: 22px;
+          border: 0;
+          border-radius: 18px;
+          background: #f8fafc;
+          box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.22);
+        }
+        .page:not(#p1):not(#p2) .trouble-card h3 {
+          grid-column: 1 / -1;
+          margin-bottom: 4px;
+          color: var(--case-ink);
+          font-size: 16px;
+        }
+        .page:not(#p1):not(#p2) .trouble-card p {
+          margin: 0;
+          padding: 12px;
+          color: #475569;
+          font-size: 12px;
+          background: #ffffff;
+          box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.16);
+        }
+        .page:not(#p1):not(#p2) .result-box {
+          padding: 18px;
+          border-radius: 18px;
+          background: #f1f8f6;
+          box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.18);
+        }
+        .env-table {
+          font-size: 13px;
+          border-radius: 16px;
+        }
+        .env-table td {
+          padding: 12px 14px;
+        }
+      }
+
+      @media screen and (max-width: 840px) {
         .toolbar {
           display: none;
         }
@@ -2122,25 +2580,135 @@
         .page-number {
           display: none;
         }
+        .book {
+          width: 100%;
+        }
+        #p1 {
+          padding-bottom: 44px;
+        }
+        #p1 .profile {
+          grid-template-columns: 96px minmax(0, 1fr);
+          gap: 20px;
+          padding: 38px 24px 84px;
+        }
+        #p1 .photo {
+          width: 96px;
+          height: 122px;
+        }
+        #p1 h1 {
+          font-size: 40px;
+        }
+        #p1 .role {
+          font-size: 14px;
+        }
+        #p1 .intro {
+          font-size: 13px;
+        }
+        #p1 .intro br {
+          display: none;
+        }
+        .hero-stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          margin: -66px 24px 38px;
+        }
+        .hero-stat {
+          min-height: 82px;
+          padding: 15px;
+        }
+        #p1 > .section {
+          padding: 0 24px;
+        }
+        #p1 .awards-cert-box {
+          grid-template-columns: 1fr;
+        }
+        #p1 .award {
+          grid-template-columns: 48px minmax(0, 1fr) 44px;
+        }
+        #p2 .section:first-child p {
+          display: block;
+          width: 100%;
+          margin-right: 0;
+        }
+        #p2 .project-list,
+        #p2 .ppt-skill-board,
+        .project-image-grid,
+        .page:not(#p1):not(#p2) .trouble-card {
+          grid-template-columns: 1fr;
+        }
+        #p2 .project-row:first-child {
+          grid-column: auto;
+        }
+        #p2 .ppt-skill-item,
+        #p2 .ppt-skill-board .ppt-skill-col:nth-child(2) .ppt-skill-item {
+          min-height: 0;
+        }
+        #p3,
+        #p5,
+        #p7,
+        #p9,
+        #p11,
+        #p4,
+        #p6,
+        #p8,
+        #p10,
+        #p12 {
+          margin: 0;
+          border-radius: 0;
+        }
+        #p4,
+        #p6,
+        #p8,
+        #p10,
+        #p12 {
+          border-bottom: 12px solid var(--case-bg);
+        }
+        .project-hero {
+          padding: 30px 26px;
+          border-radius: 18px;
+        }
+        .project-hero h2 {
+          font-size: 30px;
+        }
+        .meta {
+          grid-template-columns: 1fr;
+        }
+        .architecture-image-slot {
+          min-height: 0;
+          padding: 8px;
+        }
+        .page:not(#p1):not(#p2) .trouble-card h3 {
+          grid-column: auto;
+        }
       }
       @media print {
+        @page {
+          size: A4 landscape;
+          margin: 0;
+        }
         html,
         body {
           background: white;
         }
+        body {
+          zoom: 0.68;
+        }
         .toolbar {
+          display: none;
+        }
+        .hero-stats,
+        .profile-kicker {
           display: none;
         }
         .book {
           padding: 0;
         }
         .page {
-          width: 210mm;
-          min-height: 297mm;
+          width: 436.765mm;
+          min-height: 308.824mm;
           margin: 0;
           box-shadow: none;
           page-break-after: always;
-          padding: 18mm 22mm 14mm;
+          padding: 26.471mm 32.353mm 20.588mm;
         }
         .page:before {
           display: none;
@@ -2159,6 +2727,20 @@
         .mini-section {
           page-break-inside: avoid;
         }
+        #p12 .project-image-slot.fit-framed:first-child {
+          background: #0f172a;
+        }
+        #p12 .project-image-slot.fit-framed:first-child::before {
+          display: block;
+          inset: 0;
+          background-size: contain;
+          background-repeat: no-repeat;
+          filter: none;
+          transform: none;
+        }
+        #p12 .project-image-slot.fit-framed:first-child img {
+          opacity: 0;
+        }
       }
     </style>
   </head>
@@ -2167,9 +2749,9 @@
       <div class="toolbar-inner">
         <strong>이정빈 · Robot Software Developer Portfolio</strong
         ><span
-          ><a href="#p1">Profile</a><a href="#p2">Projects</a
-          ><a href="#p3">P1</a><a href="#p5">P2</a><a href="#p7">P3</a
-          ><a href="#p9">P4</a><a href="#p11">P5</a></span
+          ><a href="#p1">Profile</a><a href="#p2">Selected Work</a
+          ><a href="#p3">Robot System</a><a href="#p7">Vision AI</a
+          ><a href="#p11">Robot Hand</a></span
         >
       </div>
     </nav>
@@ -2184,6 +2766,7 @@
             />
           </div>
           <div>
+            <div class="profile-kicker">Vision · Robotics · AI</div>
             <h1>이정빈</h1>
             <div class="role">
               Robot Software Developer · 로봇 SW/제어 개발자
@@ -2201,6 +2784,12 @@
             </div>
           </div>
         </header>
+        <div class="hero-stats" aria-label="핵심 성과">
+          <div class="hero-stat"><strong>5</strong><span>Core Projects</span></div>
+          <div class="hero-stat"><strong>8</strong><span>Awards</span></div>
+          <div class="hero-stat"><strong>2</strong><span>Publications</span></div>
+          <div class="hero-stat"><strong>13 Nodes</strong><span>ROS2 System</span></div>
+        </div>
         <section class="section">
           <h2 class="section-title">Experiences</h2>
           <div class="row-block">
