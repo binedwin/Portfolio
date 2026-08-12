@@ -106,6 +106,8 @@
       #p8 { order: 8; }
       #p9 { order: 9; }
       #p10 { order: 10; }
+      #p11 { order: 11; }
+      #p12 { order: 12; }
       .page {
         width: 794px;
         min-height: 1123px;
@@ -408,6 +410,12 @@
       }
       #p8 .project-image-slot.fit-framed::before {
         background-image: url("image/동물 2.png");
+      }
+      #p12 .project-image-slot.fit-framed:nth-child(1)::before {
+        background-image: url("image/project5_mediapipe_vision.jpg");
+      }
+      #p12 .project-image-slot.fit-framed:nth-child(2)::before {
+        background-image: url("image/project5_tendon_robot_hand.jpg");
       }
       .project-image-slot.fit-framed img {
         position: relative;
@@ -1263,6 +1271,7 @@
       }
       #p2 .project-row:nth-child(3) { order: 4; }
       #p2 .project-row:nth-child(4) { order: 3; }
+      #p2 .project-row:nth-child(5) { order: 5; }
       .project-row {
         position: relative;
         display: grid;
@@ -1633,6 +1642,11 @@
         --project-accent-2: #64748b;
         --project-soft: #fbfaf8;
       }
+      #p2 .project-row:nth-child(5) {
+        --project-accent: #0369a1;
+        --project-accent-2: #0f766e;
+        --project-soft: #f4fbff;
+      }
       #p2 .project-no,
       #p2 .project-main h3 .note {
         background: color-mix(in srgb, var(--project-soft) 78%, #ffffff);
@@ -1645,6 +1659,42 @@
       #p2 .project-meta span {
         background: rgba(248, 250, 252, 0.88);
         box-shadow: 0 0 0 1px rgba(100, 116, 139, 0.16);
+      }
+      /* Keep five project summaries inside the A4 overview page. */
+      #p2 .section {
+        margin-bottom: 22px;
+      }
+      #p2 .section-title {
+        margin-bottom: 14px;
+      }
+      #p2 .project-list {
+        gap: 8px;
+      }
+      #p2 .project-row {
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 10px;
+        padding: 8px 11px;
+        border-radius: 13px;
+      }
+      #p2 .project-no {
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+      }
+      #p2 .project-main h3 {
+        margin-bottom: 2px;
+        font-size: 14px;
+      }
+      #p2 .project-main p {
+        margin-bottom: 5px;
+        font-size: 11.5px;
+        line-height: 1.32;
+      }
+      #p2 .project-meta {
+        font-size: 10.5px;
+      }
+      #p2 .project-meta span {
+        padding: 2px 7px;
       }
       #p2 .skill-col {
         --skill-accent: #1e3a8a;
@@ -2122,7 +2172,7 @@
         ><span
           ><a href="#p1">Profile</a><a href="#p2">Projects</a
           ><a href="#p3">P1</a><a href="#p5">P2</a><a href="#p7">P3</a
-          ><a href="#p9">P4</a></span
+          ><a href="#p9">P4</a><a href="#p11">P5</a></span
         >
       </div>
     </nav>
@@ -2403,6 +2453,23 @@
                 </div>
               </div>
             </article>
+            <article class="project-row">
+              <div class="project-no">05</div>
+              <div class="project-main">
+                <h3>
+                  THING — 실시간 모방 텐던 로봇 손
+                  <span class="note">11-12p</span>
+                </h3>
+                <p>
+                  손 랜드마크를 7축 명령으로 변환해 로봇 손을 제어하고 동작
+                  데이터를 기록·배포한 ROS2 시스템
+                </p>
+                <div class="project-meta">
+                  <span><b>역할</b>EMB/AI · Vision AI 및 시스템 통합</span
+                  ><span><b>기간</b>2026.07-2026.08</span>
+                </div>
+              </div>
+            </article>
           </div>
         </section>
         <section class="section">
@@ -2579,14 +2646,14 @@
           <div class="project-image-grid">
             <div class="project-image-slot">
               <img
-                src="image/gazebo.png"
-                alt="Gazebo 기반 자율 배달 로봇 시뮬레이션"
+                src="image/두봇.jpg"
+                alt="Dobot 기반 알약 분류 및 Pick and Place"
               />
             </div>
             <div class="project-image-slot">
               <img
-                src="image/두봇.png"
-                alt="Dobot 기반 알약 분류 및 Pick and Place"
+                src="image/gazebo.png"
+                alt="Gazebo 기반 자율 배달 로봇 시뮬레이션"
               />
             </div>
           </div>
@@ -3249,6 +3316,182 @@
           </div>
         </section>
         <div class="page-number">- 8 -</div>
+      </section>
+      <section class="page" id="p11">
+        <div
+          class="project-hero"
+          style="background: linear-gradient(135deg, #0369a1, #0f766e)"
+        >
+          <small>PROJECT 05</small>
+          <h2>THING — 실시간 모방 텐던 로봇 손</h2>
+          <p>
+            MediaPipe·ROS2·DYNAMIXEL을 연결한 Physical AI 교육용 로봇 손
+          </p>
+        </div>
+        <div class="meta">
+          <div><b>기간:</b> 2026.07-2026.08 · 3주</div>
+          <div><b>역할:</b> EMB/AI · Vision AI 및 시스템 통합</div>
+          <div><b>개발 인원:</b> 6명</div>
+        </div>
+        <section class="mini-section">
+          <h3 class="mini-title">개요</h3>
+          <ul class="bullets overview-summary">
+            <li>
+              카메라로 사용자의 손동작을 인식해 텐던 구동 로봇 손이 실시간으로
+              모방하고, 관측·명령·모터 상태를 학습용 데이터로 저장·배포하는
+              End-to-End Physical AI 시스템입니다.
+            </li>
+          </ul>
+        </section>
+        <section class="mini-section">
+          <h3 class="mini-title">핵심 구현 포인트</h3>
+          <ul class="bullets">
+            <li>
+              <b>Vision 기반 7축 제어:</b> MediaPipe 손 랜드마크 21개를 엄지
+              3축과 네 손가락 굽힘 4축으로 변환
+            </li>
+            <li>
+              <b>분산 로봇 제어:</b> Jetson Orin Nano와 Raspberry Pi 5를 ROS2
+              Humble·Cyclone DDS로 연결해 7개 DYNAMIXEL 구동
+            </li>
+            <li>
+              <b>안전한 명령 경로:</b> MIMIC·MANUAL·TELEOP 제어권을 중재하고
+              Command Guard와 상태 머신으로 명령 제한
+            </li>
+            <li>
+              <b>학습 데이터 파이프라인:</b> rosbag2 기록을 JSON·CSV로 변환해
+              AWS EC2 포털에서 세션별 조회·다운로드 지원
+            </li>
+          </ul>
+        </section>
+        <section class="mini-section architecture-section">
+          <h3 class="mini-title">시스템 아키텍처</h3>
+          <div class="architecture-image-slot">
+            <img
+              src="image/project5_tendon_hand_architecture.svg"
+              alt="THING 실시간 모방 텐던 로봇 손 시스템 아키텍처"
+            />
+          </div>
+        </section>
+        <section class="mini-section">
+          <h3 class="mini-title">개발 환경</h3>
+          <table class="env-table">
+            <tbody>
+              <tr>
+                <td>Vision AI</td>
+                <td>MediaPipe 0.10.9, OpenCV, Python, CvBridge</td>
+              </tr>
+              <tr>
+                <td>Robot SW</td>
+                <td>ROS2 Humble, Cyclone DDS, rclpy, rclcpp, DYNAMIXEL SDK</td>
+              </tr>
+              <tr>
+                <td>Edge / HW</td>
+                <td>Jetson Orin Nano, Raspberry Pi 5, XL-330-288T × 7, U2D2</td>
+              </tr>
+              <tr>
+                <td>Web / Data</td>
+                <td>React, Vite, WebSocket, MJPEG, rosbag2, Django, SQLite, AWS EC2</td>
+              </tr>
+              <tr>
+                <td>최종 검증</td>
+                <td>13 ROS Nodes · 17 Topics · 20 Hz · Kapandji 10/10</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <div class="page-number">- 11 -</div>
+      </section>
+      <section class="page trouble-page" id="p12">
+        <section class="mini-section project-images-section">
+          <h3 class="mini-title">프로젝트 이미지</h3>
+          <div class="project-image-grid">
+            <div class="project-image-slot fit-framed">
+              <img
+                src="image/project5_mediapipe_vision.jpg"
+                alt="Jetson Orin Nano에서 MediaPipe 손 랜드마크를 인식하는 모습"
+              />
+            </div>
+            <div class="project-image-slot fit-framed">
+              <img
+                src="image/project5_tendon_robot_hand.jpg"
+                alt="7개 DYNAMIXEL과 텐던을 결합한 로봇 손 시제품"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="mini-section role-summary">
+          <h3 class="mini-title">담당 역할</h3>
+          <ul class="bullets">
+            <li>
+              ROS2 카메라 Publisher, MediaPipe 21-landmark 검출, 7축 목표 생성
+              노드 구현
+            </li>
+            <li>
+              손바닥 폭 정규화, 사용자 Calibration, Deadband·LPF·변화량 제한을
+              적용해 MIMIC 제어 안정화
+            </li>
+            <li>
+              저지연 MJPEG·WebSocket과 원격 기동 흐름을 구현하고 Jetson–웹–로봇
+              통합 테스트 및 문서화 수행
+            </li>
+          </ul>
+        </section>
+        <section class="mini-section">
+          <h3 class="mini-title">트러블슈팅</h3>
+          <div class="trouble-grid">
+            <article class="trouble-card">
+              <h3>1. 손 크기·카메라 거리 변화로 인한 엄지축 흔들림</h3>
+              <p>
+                <b>문제:</b> 픽셀 거리만 사용하면 사용자와 촬영 거리에 따라 엄지
+                대립·벌림 값이 달라지고 축 간 간섭이 발생했습니다.
+              </p>
+              <p>
+                <b>해결:</b> World Landmark와 관절각, 손바닥 폭 정규화를
+                적용하고 사용자별 Open/Fist Calibration과 필터링을 추가했습니다.
+              </p>
+              <p>
+                <b>결과:</b> 개인차와 촬영 환경 변화에도 7축 목표가 급변하지 않는
+                안정적인 MIMIC 입력을 확보했습니다.
+              </p>
+            </article>
+            <article class="trouble-card">
+              <h3>2. 영상 프레임 누적으로 커지는 모방 지연</h3>
+              <p>
+                <b>문제:</b> 처리 속도보다 입력이 빠르면 오래된 프레임이 큐에
+                쌓여 화면과 로봇 동작이 현재 손 자세보다 늦게 따라왔습니다.
+              </p>
+              <p>
+                <b>해결:</b> ROS SensorData QoS를 depth=1·BEST_EFFORT로 설정하고,
+                MJPEG도 최신 프레임만 유지하도록 처리했습니다.
+              </p>
+              <p>
+                <b>결과:</b> 오래된 프레임을 폐기해 실시간 모방과 관제 화면의
+                지연 누적을 억제했습니다.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section class="mini-section">
+          <h3 class="mini-title">프로젝트 결과</h3>
+          <div class="result-box">
+            <ul>
+              <li>
+                21개 손 랜드마크 → 7축 목표 → 7개 모터로 이어지는 실시간 모방
+                제어를 완성하고 Wave·Pinch·원통 파지 시연을 수행했습니다.
+              </li>
+              <li>
+                Vision, ROS2 제어, 안전 상태, 웹 관제, 데이터 저장을
+                Jetson–Raspberry Pi–Laptop–EC2 구조로 통합했습니다.
+              </li>
+              <li>
+                Kapandji Test 10/10을 확인하고, 학습에 재사용할 수 있는
+                rosbag2·JSON·CSV 데이터 제공 흐름을 구축했습니다.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="page-number">- 12 -</div>
       </section>
     </main>
   </body>
