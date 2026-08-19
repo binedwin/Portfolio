@@ -102,12 +102,18 @@
         flex-direction: column;
         padding: 30px 0 64px;
       }
-      #p7 { order: 7; }
-      #p8 { order: 8; }
-      #p9 { order: 9; }
-      #p10 { order: 10; }
-      #p11 { order: 11; }
-      #p12 { order: 12; }
+      #p1 { order: 1; }
+      #p2 { order: 2; }
+      #p11 { order: 3; }
+      #p12 { order: 4; }
+      #p3 { order: 5; }
+      #p4 { order: 6; }
+      #p5 { order: 7; }
+      #p6 { order: 8; }
+      #p7 { order: 9; }
+      #p8 { order: 10; }
+      #p9 { order: 11; }
+      #p10 { order: 12; }
       .page {
         width: 794px;
         min-height: 1123px;
@@ -392,6 +398,9 @@
         object-fit: contain;
         background: #ffffff;
       }
+      #p10 .project-image-grid .project-image-slot:nth-child(2) {
+        align-self: center;
+      }
       .project-image-slot.fit-framed {
         position: relative;
         background: #0f172a;
@@ -409,10 +418,10 @@
         background-image: url("image/동물 2.png");
       }
       #p12 .project-image-slot.fit-framed:nth-child(1)::before {
-        background-image: url("image/project5_mediapipe_vision.jpg");
+        background-image: url("image/project5_tendon_robot_hand.jpg");
       }
       #p12 .project-image-slot.fit-framed:nth-child(2)::before {
-        background-image: url("image/project5_tendon_robot_hand.jpg");
+        background-image: url("image/project5_mediapipe_vision.png");
       }
       .project-image-slot.fit-framed img {
         position: relative;
@@ -1266,9 +1275,11 @@
         display: grid;
         gap: 11px;
       }
-      #p2 .project-row:nth-child(3) { order: 4; }
-      #p2 .project-row:nth-child(4) { order: 3; }
-      #p2 .project-row:nth-child(5) { order: 5; }
+      #p2 .project-row:nth-child(1) { order: 2; }
+      #p2 .project-row:nth-child(2) { order: 3; }
+      #p2 .project-row:nth-child(3) { order: 5; }
+      #p2 .project-row:nth-child(4) { order: 4; }
+      #p2 .project-row:nth-child(5) { order: 1; }
       .project-row {
         position: relative;
         display: grid;
@@ -1926,14 +1937,15 @@
         text-align: left;
         color: #64748b;
       }
-      #p1 .awards:first-child .award:nth-child(4) { order: 1; }
-      #p1 .awards:first-child .award:nth-child(3) { order: 2; }
-      #p1 .awards:first-child .award:nth-child(2) { order: 3; }
-      #p1 .awards:first-child .award:nth-child(1) { order: 4; }
-      #p1 .awards:nth-child(2) .award:nth-child(2) { order: 5; }
-      #p1 .awards:nth-child(2) .award:nth-child(3) { order: 6; }
-      #p1 .awards:nth-child(2) .award:nth-child(4) { order: 7; }
-      #p1 .awards:nth-child(2) .award:nth-child(1) { order: 8; }
+      #p1 .awards:nth-child(2) .award:nth-child(1) { order: 1; }
+      #p1 .awards:nth-child(2) .award:nth-child(2) { order: 2; }
+      #p1 .awards:nth-child(2) .award:nth-child(3) { order: 3; }
+      #p1 .awards:nth-child(2) .award:nth-child(4) { order: 4; }
+      #p1 .awards:nth-child(2) .award:nth-child(5) { order: 5; }
+      #p1 .awards:first-child .award:nth-child(1) { order: 6; }
+      #p1 .awards:first-child .award:nth-child(2) { order: 7; }
+      #p1 .awards:first-child .award:nth-child(3) { order: 8; }
+      #p1 .awards:first-child .award:nth-child(4) { order: 9; }
       #p1 .cert-row {
         margin: 0;
       }
@@ -2168,8 +2180,8 @@
         <strong>이정빈 · Robot Software Developer Portfolio</strong
         ><span
           ><a href="#p1">Profile</a><a href="#p2">Projects</a
-          ><a href="#p3">P1</a><a href="#p5">P2</a><a href="#p7">P3</a
-          ><a href="#p9">P4</a><a href="#p11">P5</a></span
+          ><a href="#p11">P1</a><a href="#p3">P2</a><a href="#p5">P3</a
+          ><a href="#p7">P4</a><a href="#p9">P5</a></span
         >
       </div>
     </nav>
@@ -2222,7 +2234,7 @@
                   <h3>국립안동대학교</h3>
                   <div class="sub">컴퓨터공학과</div>
                   <ul class="bullets">
-                    <li>제 34대 컴퓨터공학과 학생회장</li>
+                    <li>제34대 컴퓨터공학과 학생회장</li>
                     <li>소프트웨어공학 기반 SW 개발</li>
                   </ul>
                 </div>
@@ -2243,7 +2255,7 @@
                 </div>
               </div>
               <div class="event">
-                <div class="date long-date">병장 만기전역</div>
+                <div class="date long-date">병장 만기 전역</div>
                 <div>
                   <h3>제1 지상작전사령부 복무</h3>
                   <div class="sub">정보통신여단 312통신대대 무선통신병과</div>
@@ -2297,7 +2309,7 @@
                     <b
                       >경북 클라우드 전문인력 양성과정 1기 프로젝트 ·
                       국립안동대학교</b
-                    ><span>기업 시스템 현황 분석 및 클러우드 전환</span>
+                    ><span>기업 시스템 현황 분석 및 클라우드 전환</span>
                   </div>
                   <div class="result">우수상</div>
                   <div class="year">2024.12</div>
@@ -2305,7 +2317,7 @@
                 <div class="award">
                   <div>
                     <b>창업 아이디어 경진대회 · 국립안동대학교</b
-                    ><span>쓰레기 분류 로봇 및 쓰레기 수거 어플</span>
+                    ><span>쓰레기 분류 로봇 및 쓰레기 수거 앱</span>
                   </div>
                   <div class="result">장려상</div>
                   <div class="year">2024.11</div>
@@ -2320,6 +2332,14 @@
                 </div>
               </div>
               <div class="awards">
+                <div class="award">
+                  <div>
+                    <b>공통 프로젝트 · SSAFY</b
+                    ><span>ROS2 기반 Tendon-Driven 다관절 로봇 손</span>
+                  </div>
+                  <div class="result">1위</div>
+                  <div class="year">2026.08</div>
+                </div>
                 <div class="award">
                   <div><b>포항 테크노파크</b><span>치매 예방 서비스</span></div>
                   <div class="result">우수상</div>
@@ -2361,6 +2381,7 @@
                 <div class="cert-item"><b>정보처리기사</b></div>
                 <div class="cert-item"><b>SQLD</b></div>
                 <div class="cert-item"><b>삼성 SW 역량테스트 A형</b></div>
+                <div class="cert-item"><b>TOEIC SPEAKING IM3</b></div>
                 <div class="cert-item"><b>운전면허 1종</b></div>
               </div>
             </div>
@@ -2389,11 +2410,11 @@
           <h2 class="section-title">Projects</h2>
           <div class="project-list">
             <article class="project-row">
-              <div class="project-no">01</div>
+              <div class="project-no">02</div>
               <div class="project-main">
                 <h3>
                   ROS2 기반 알약 분류 및 자율 배달 로봇
-                  <span class="note">3-4p</span>
+                  <span class="note">5-6p</span>
                 </h3>
                 <p>
                   카메라 3D 좌표 변환부터 ROS2 기반 Pick &amp; Place, AMR 배송까지
@@ -2406,9 +2427,9 @@
               </div>
             </article>
             <article class="project-row">
-              <div class="project-no">02</div>
+              <div class="project-no">03</div>
               <div class="project-main">
-                <h3>수도관 누수 지점 예측 AI <span class="note">5-6p</span></h3>
+                <h3>수도관 누수 지점 예측 AI <span class="note">7-8p</span></h3>
                 <p>
                   AI HUB 센서 데이터 신뢰성을 검증하고 KNN 93.56% 정확도로 누수
                   지점을 예측한 AI 모델
@@ -2420,10 +2441,10 @@
               </div>
             </article>
             <article class="project-row">
-              <div class="project-no">04</div>
+              <div class="project-no">05</div>
               <div class="project-main">
                 <h3>
-                  RAG-Vision 치매 예방 챗봇 <span class="note">9-10p</span>
+                  RAG-Vision 치매 예방 챗봇 <span class="note">11-12p</span>
                 </h3>
                 <p>
                   RAG와 Vision AI를 결합해 과거 기억 회상과 음성 대화를 지원한
@@ -2436,9 +2457,9 @@
               </div>
             </article>
             <article class="project-row">
-              <div class="project-no">03</div>
+              <div class="project-no">04</div>
               <div class="project-main">
-                <h3>AI 동물 캐릭터 생성 서비스 <span class="note">7-8p</span></h3>
+                <h3>AI 동물 캐릭터 생성 서비스 <span class="note">9-10p</span></h3>
                 <p>
                   얼굴 특징 분석과 생성형 AI를 결합해 개인 맞춤형 동물 캐릭터
                   도안을 생성한 서비스
@@ -2450,11 +2471,11 @@
               </div>
             </article>
             <article class="project-row">
-              <div class="project-no">05</div>
+              <div class="project-no">01</div>
               <div class="project-main">
                 <h3>
                   THING — 실시간 모방 텐던 로봇 손
-                  <span class="note">11-12p</span>
+                  <span class="note">3-4p</span>
                 </h3>
                 <p>
                   손 랜드마크를 7축 명령으로 변환해 로봇 손을 제어하고 동작
@@ -2489,7 +2510,7 @@
                     <strong class="ppt-skill-name">Python</strong>
                     <span class="ppt-skill-level" aria-label="Python 숙련도 3/5"><span class="on"></span><span class="on"></span><span class="on"></span><span class=""></span><span class=""></span></span>
                   </div>
-                  <p class="ppt-skill-desc">주로 객체 탐지에 언어를 활용하였는데 특히 YOLO 기반 알약 객체 인식에서 이미지 전처리와 좌표 추출 로직을 구현하였습니다. 또한 누수 예측 프로젝트에서는 센서 데이터 전처리, 모델 학습, 성능 평가를 진행했습니다.</p>
+                  <p class="ppt-skill-desc">주로 객체 탐지에 Python을 활용하였는데 특히 YOLO 기반 알약 객체 인식에서 이미지 전처리와 좌표 추출 로직을 구현하였습니다. 또한 누수 예측 프로젝트에서는 센서 데이터 전처리, 모델 학습, 성능 평가를 진행했습니다.</p>
                 </div>
               </article>
               <article class="ppt-skill-item">
@@ -2509,7 +2530,7 @@
                     <strong class="ppt-skill-name">Git</strong>
                     <span class="ppt-skill-level" aria-label="Git 숙련도 4/5"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class=""></span></span>
                   </div>
-                  <p class="ppt-skill-desc">4개 프로젝트 전반에서 팀원들과 기능별 브랜치를 나누어 개발하고 변경 이력을 관리했습니다. 특히 로봇, AI, 백엔드 기능이 동시에 개발되는 과정에서 코드 충돌을 조율하고 협업 흐름을 유지하는 데 사용했습니다.</p>
+                  <p class="ppt-skill-desc">5개 프로젝트 전반에서 팀원들과 기능별 브랜치를 나누어 개발하고 변경 이력을 관리했습니다. 특히 로봇, AI, 백엔드 기능이 동시에 개발되는 과정에서 코드 충돌을 조율하고 협업 흐름을 유지하는 데 사용했습니다.</p>
                 </div>
               </article>
             </div>
@@ -2551,7 +2572,7 @@
       </section>
       <section class="page" id="p3">
         <div class="project-hero">
-          <small>PROJECT 01</small>
+          <small>PROJECT 02</small>
           <h2>ROS2 기반 알약 분류 및 자율 배달 로봇 시스템</h2>
           <p>Vision–Manipulator–AMR 통합 End-to-End 로봇 시스템</p>
         </div>
@@ -2634,7 +2655,7 @@
             </tbody>
           </table>
         </section>
-        <div class="page-number">- 3 -</div>
+        <div class="page-number">- 5 -</div>
       </section>
       <section class="page trouble-page" id="p4">
         <section class="mini-section project-images-section">
@@ -2744,14 +2765,14 @@
             </ul>
           </div>
         </section>
-        <div class="page-number">- 4 -</div>
+        <div class="page-number">- 6 -</div>
       </section>
       <section class="page" id="p5">
         <div
           class="project-hero"
           style="background: linear-gradient(135deg, #0f766e, #14b8a6)"
         >
-          <small>PROJECT 02</small>
+          <small>PROJECT 03</small>
           <h2>수도관 누수 지점 예측 AI 모델</h2>
           <p>
             센서 데이터 신뢰성 검증과 알고리즘 비교를 통해 누수 지점 예측 모델을
@@ -2826,7 +2847,7 @@
             </tbody>
           </table>
         </section>
-        <div class="page-number">- 5 -</div>
+        <div class="page-number">- 7 -</div>
       </section>
       <section class="page trouble-page" id="p6">
         <section class="mini-section project-images-section">
@@ -2926,14 +2947,14 @@
             </ul>
           </div>
         </section>
-        <div class="page-number">- 6 -</div>
+        <div class="page-number">- 8 -</div>
       </section>
       <section class="page" id="p9">
         <div
           class="project-hero"
           style="background: linear-gradient(135deg, #7c3aed, #2563eb)"
         >
-          <small>PROJECT 04</small>
+          <small>PROJECT 05</small>
           <h2>RAG-Vision 기반 치매 예방 챗봇</h2>
           <p>
              Vision AI·RAG 기반 치매 예방 챗봇
@@ -2977,15 +2998,6 @@
             </li>
           </ul>
         </section>
-        <section class="mini-section architecture-section">
-          <h3 class="mini-title">시스템 아키텍처</h3>
-          <div class="architecture-image-slot">
-            <img
-              src="image/project4_memory_archive_architecture.png"
-              alt="Memory Archive 추억 사진 기반 AI 회상 대화 시스템 아키텍처"
-            />
-          </div>
-        </section>
         <section class="mini-section">
           <h3 class="mini-title">개발 환경</h3>
           <table class="env-table">
@@ -3011,13 +3023,13 @@
               <tr>
                 <td>성과/근거</td>
                 <td>
-                  웹개발양성교육 7기 프로젝트, 포항TP 우수상/졸업작품 수상 이력
+                  웹 개발 양성 교육 7기 프로젝트, 포항TP 우수상/졸업작품 수상 이력
                 </td>
               </tr>
             </tbody>
           </table>
         </section>
-        <div class="page-number">- 9 -</div>
+        <div class="page-number">- 11 -</div>
       </section>
       <section class="page trouble-page" id="p10">
         <section class="mini-section project-images-section">
@@ -3025,14 +3037,14 @@
           <div class="project-image-grid">
             <div class="project-image-slot fit-natural">
               <img
-                src="image/치매 웹사이트 1.png"
-                alt="Memory Archive 치매 예방 웹사이트 화면 1"
+                src="image/project4_memory_archive_architecture.png"
+                alt="Memory Archive 추억 사진 기반 AI 회상 대화 시스템 아키텍처"
               />
             </div>
             <div class="project-image-slot fit-natural">
               <img
-                src="image/치매 웹사이트 2.png"
-                alt="Memory Archive 치매 예방 웹사이트 화면 2"
+                src="image/치매 웹사이트 1.png"
+                alt="Memory Archive 치매 예방 웹사이트 화면 1"
               />
             </div>
           </div>
@@ -3069,12 +3081,12 @@
               </p>
             </article>
             <article class="trouble-card">
-              <h3>2. 팀원간의 불화</h3>
+              <h3>2. 팀원 간의 불화</h3>
               <p>
                 <b>문제:</b> 팀원 한 명의 참여 저조로 프로젝트 일정이 지연되고 통합 테스트가 불가능한 상황이 발생했습니다.
               </p>
               <p>
-                <b>해결:</b> 팀장으로써 원인을 파악하기 위해 직접 대화를 시도했고, 기술 이해도에 대한 부담과 맡은 역할의 범위가 모호하다는 점을 확인 후, 역할을 세분화하고 난이도를 조정했으며, 중간 점검 방식을 도입해 참여도를 높였습니다..
+                <b>해결:</b> 팀장으로서 원인을 파악하기 위해 직접 대화를 시도했고, 기술 이해도에 대한 부담과 맡은 역할의 범위가 모호하다는 점을 확인한 후, 역할을 세분화하고 난이도를 조정했으며, 중간 점검 방식을 도입해 참여도를 높였습니다.
               </p>
               <p>
                 <b>배운 점:</b> 팀 문제는 개인의 태도보다 구조와 소통에서 비롯될 수 있음을 깨달았고, 갈등을 방치하기보다 원인을 분석하고 실행 가능한 해결 방안을 설계하는 것이 리더의 역할임을 배웠습니다.
@@ -3103,7 +3115,7 @@
           <div class="result-box">
             <ul>
               <li>
-                웹개발양성교육 7기 과정에서 RAG-Vision 기반 치매 예방 챗봇
+                웹 개발 양성 교육 7기 과정에서 RAG-Vision 기반 치매 예방 챗봇
                 서비스를 제작했습니다.
               </li>
               <li>
@@ -3117,14 +3129,14 @@
             </ul>
           </div>
         </section>
-        <div class="page-number">- 10 -</div>
+        <div class="page-number">- 12 -</div>
       </section>
       <section class="page" id="p7">
         <div
           class="project-hero"
           style="background: linear-gradient(135deg, #f97316, #fb923c)"
         >
-          <small>PROJECT 03</small>
+          <small>PROJECT 04</small>
           <h2>AI 동물 캐릭터 생성 서비스</h2>
           <p>
             UML 기반 설계, 얼굴 특징 분석, 딥러닝 분류, 생성형 AI 이미지 생성을
@@ -3211,7 +3223,7 @@
             </tbody>
           </table>
         </section>
-        <div class="page-number">- 7 -</div>
+        <div class="page-number">- 9 -</div>
       </section>
       <section class="page trouble-page" id="p8">
         <section class="mini-section project-images-section">
@@ -3286,7 +3298,7 @@
                 <b>해결:</b> RGB 이미지를 Grayscale로 변환해 색 노이즈를 줄이고 명암 기반 특징에 집중하도록 전처리를 진행하였습니다.
               </p>
               <p>
-                <b>배운 점:</b> 실전 Vision 서비스에서는 복잡한 기법보다 환경에 맞는 안정적인 전처리 전략이 중요함을 배움.
+                <b>배운 점:</b> 실전 Vision 서비스에서는 복잡한 기법보다 환경에 맞는 안정적인 전처리 전략이 중요함을 배웠습니다.
               </p>
             </article>
           </div>
@@ -3311,14 +3323,14 @@
             </ul>
           </div>
         </section>
-        <div class="page-number">- 8 -</div>
+        <div class="page-number">- 10 -</div>
       </section>
       <section class="page" id="p11">
         <div
           class="project-hero"
           style="background: linear-gradient(135deg, #0369a1, #0f766e)"
         >
-          <small>PROJECT 05</small>
+          <small>PROJECT 01</small>
           <h2>THING — 실시간 모방 텐던 로봇 손</h2>
           <p>
             MediaPipe·ROS2·DYNAMIXEL을 연결한 Physical AI 교육용 로봇 손
@@ -3334,7 +3346,7 @@
           <ul class="bullets overview-summary">
             <li>
               카메라로 사용자의 손동작을 인식해 텐던 구동 로봇 손이 실시간으로
-              모방하고, 관측·명령·모터 상태를 학습용 데이터로 저장·배포하는
+              모방하고, 관측, 명령, <br />모터 상태를 학습용 데이터로 저장 및 배포하는
               End-to-End Physical AI 시스템입니다.
             </li>
           </ul>
@@ -3348,15 +3360,15 @@
             </li>
             <li>
               <b>분산 로봇 제어:</b> Jetson Orin Nano와 Raspberry Pi 5를 ROS2
-              Humble·Cyclone DDS로 연결해 7개 DYNAMIXEL 구동
+              Humble와 Cyclone DDS로 연결해 7개 DYNAMIXEL 구동
             </li>
             <li>
-              <b>안전한 명령 경로:</b> MIMIC·MANUAL·TELEOP 제어권을 중재하고
-              Command Guard와 상태 머신으로 명령 제한
+              <b>안전한 명령 경로:</b> MIMIC, MANUAL, TELEOP 제어권을 중재하고
+              Command Guard와 상태 <br />머신으로 명령 제한
             </li>
             <li>
-              <b>학습 데이터 파이프라인:</b> rosbag2 기록을 JSON·CSV로 변환해
-              AWS EC2 포털에서 세션별 조회·다운로드 지원
+              <b>학습 데이터 파이프라인:</b> rosbag2 기록을 JSON와 CSV로 변환해
+              AWS EC2 포털에서 세션별 조회 및 다운로드 지원
             </li>
           </ul>
         </section>
@@ -3374,29 +3386,32 @@
           <table class="env-table">
             <tbody>
               <tr>
-                <td>Vision AI</td>
-                <td>MediaPipe 0.10.9, OpenCV, Python, CvBridge</td>
+                <td>Robot·Edge</td>
+                <td>
+                  ROS 2 Humble, CycloneDDS, Jetson Orin Nano, Raspberry Pi 5,<br />
+                  DYNAMIXEL XL330-M288-T, U2D2
+                </td>
               </tr>
               <tr>
-                <td>Robot SW</td>
-                <td>ROS2 Humble, Cyclone DDS, rclpy, rclcpp, DYNAMIXEL SDK</td>
+                <td>Vision</td>
+                <td>MediaPipe, OpenCV, cv_bridge</td>
               </tr>
               <tr>
-                <td>Edge / HW</td>
-                <td>Jetson Orin Nano, Raspberry Pi 5, XL-330-288T × 7, U2D2</td>
+                <td>Web</td>
+                <td>React, Vite, WebSocket, MJPEG</td>
               </tr>
               <tr>
-                <td>Web / Data</td>
-                <td>React, Vite, WebSocket, MJPEG, rosbag2, Django, SQLite, AWS EC2</td>
+                <td>Data</td>
+                <td>rosbag2, Django, SQLite, JSON·CSV, AWS EC2</td>
               </tr>
               <tr>
-                <td>최종 검증</td>
-                <td>13 ROS Nodes · 17 Topics · 20 Hz · Kapandji 10/10</td>
+                <td>Fabrication</td>
+                <td>Blender, 3D Printing, Tendon-driven Mechanism</td>
               </tr>
             </tbody>
           </table>
         </section>
-        <div class="page-number">- 11 -</div>
+        <div class="page-number">- 3 -</div>
       </section>
       <section class="page trouble-page" id="p12">
         <section class="mini-section project-images-section">
@@ -3404,14 +3419,14 @@
           <div class="project-image-grid">
             <div class="project-image-slot fit-framed">
               <img
-                src="image/project5_mediapipe_vision.jpg"
-                alt="Jetson Orin Nano에서 MediaPipe 손 랜드마크를 인식하는 모습"
+                src="image/project5_tendon_robot_hand.jpg"
+                alt="7개 DYNAMIXEL과 텐던을 결합한 로봇 손 시제품"
               />
             </div>
             <div class="project-image-slot fit-framed">
               <img
-                src="image/project5_tendon_robot_hand.jpg"
-                alt="7개 DYNAMIXEL과 텐던을 결합한 로봇 손 시제품"
+                src="image/project5_mediapipe_vision.png"
+                alt="Jetson Orin Nano에서 MediaPipe 손 랜드마크를 인식하는 모습"
               />
             </div>
           </div>
@@ -3420,16 +3435,13 @@
           <h3 class="mini-title">담당 역할</h3>
           <ul class="bullets">
             <li>
-              ROS2 카메라 Publisher, MediaPipe 21-landmark 검출, 7축 목표 생성
-              노드 구현
+              요구사항과 시스템 구조를 설계하고, Jira 스프린트·백로그와 GitLab 브랜치·Merge Request를 </br>관리하여 팀의 일정과 형상 통합 주도
             </li>
             <li>
-              손바닥 폭 정규화, 사용자 Calibration, Deadband·LPF·변화량 제한을
-              적용해 MIMIC 제어 안정화
+              MediaPipe의 21개 3D 손 랜드마크와 관절각을 로봇 손의 7개 논리축 목표값으로 변환
             </li>
             <li>
-              저지연 MJPEG·WebSocket과 원격 기동 흐름을 구현하고 Jetson–웹–로봇
-              통합 테스트 및 문서화 수행
+              손바닥 폭 정규화, 사용자 캘리브레이션, Median·EMA·Deadband·Rate Limit을 적용해 손떨림과 순간 오차 억제
             </li>
           </ul>
         </section>
@@ -3487,7 +3499,7 @@
             </ul>
           </div>
         </section>
-        <div class="page-number">- 12 -</div>
+        <div class="page-number">- 4 -</div>
       </section>
     </main>
   </body>
