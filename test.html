@@ -102,12 +102,18 @@
         flex-direction: column;
         padding: 30px 0 64px;
       }
-      #p7 { order: 7; }
-      #p8 { order: 8; }
-      #p9 { order: 9; }
-      #p10 { order: 10; }
-      #p11 { order: 11; }
-      #p12 { order: 12; }
+      #p1 { order: 1; }
+      #p2 { order: 2; }
+      #p11 { order: 3; }
+      #p12 { order: 4; }
+      #p3 { order: 5; }
+      #p4 { order: 6; }
+      #p5 { order: 7; }
+      #p6 { order: 8; }
+      #p7 { order: 9; }
+      #p8 { order: 10; }
+      #p9 { order: 11; }
+      #p10 { order: 12; }
       .page {
         width: 794px;
         min-height: 1123px;
@@ -1266,9 +1272,11 @@
         display: grid;
         gap: 11px;
       }
-      #p2 .project-row:nth-child(3) { order: 4; }
-      #p2 .project-row:nth-child(4) { order: 3; }
-      #p2 .project-row:nth-child(5) { order: 5; }
+      #p2 .project-row:nth-child(1) { order: 2; }
+      #p2 .project-row:nth-child(2) { order: 3; }
+      #p2 .project-row:nth-child(3) { order: 5; }
+      #p2 .project-row:nth-child(4) { order: 4; }
+      #p2 .project-row:nth-child(5) { order: 1; }
       .project-row {
         position: relative;
         display: grid;
@@ -2333,7 +2341,7 @@
             inset 0 0 0 1px rgba(148, 163, 184, 0.22),
             0 18px 42px -38px rgba(15, 23, 42, 0.55);
         }
-        #p2 .project-row:first-child {
+        #p2 .project-row:nth-child(5) {
           grid-column: 1 / -1;
           min-height: 0;
           background: linear-gradient(135deg, #eef4ff, #ffffff);
@@ -2750,8 +2758,8 @@
         <strong>이정빈 · Robot Software Developer Portfolio</strong
         ><span
           ><a href="#p1">Profile</a><a href="#p2">Selected Work</a
-          ><a href="#p3">Robot System</a><a href="#p7">Vision AI</a
-          ><a href="#p11">Robot Hand</a></span
+          ><a href="#p11">Robot Hand</a><a href="#p3">Robot System</a
+          ><a href="#p7">Vision AI</a></span
         >
       </div>
     </nav>
@@ -2978,11 +2986,11 @@
           <h2 class="section-title">Projects</h2>
           <div class="project-list">
             <article class="project-row">
-              <div class="project-no">01</div>
+              <div class="project-no">02</div>
               <div class="project-main">
                 <h3>
                   ROS2 기반 알약 분류 및 자율 배달 로봇
-                  <span class="note">3-4p</span>
+                  <span class="note">5-6p</span>
                 </h3>
                 <p>
                   카메라 3D 좌표 변환부터 ROS2 기반 Pick &amp; Place, AMR 배송까지
@@ -2995,9 +3003,9 @@
               </div>
             </article>
             <article class="project-row">
-              <div class="project-no">02</div>
+              <div class="project-no">03</div>
               <div class="project-main">
-                <h3>수도관 누수 지점 예측 AI <span class="note">5-6p</span></h3>
+                <h3>수도관 누수 지점 예측 AI <span class="note">7-8p</span></h3>
                 <p>
                   AI HUB 센서 데이터 신뢰성을 검증하고 KNN 93.56% 정확도로 누수
                   지점을 예측한 AI 모델
@@ -3009,10 +3017,10 @@
               </div>
             </article>
             <article class="project-row">
-              <div class="project-no">04</div>
+              <div class="project-no">05</div>
               <div class="project-main">
                 <h3>
-                  RAG-Vision 치매 예방 챗봇 <span class="note">9-10p</span>
+                  RAG-Vision 치매 예방 챗봇 <span class="note">11-12p</span>
                 </h3>
                 <p>
                   RAG와 Vision AI를 결합해 과거 기억 회상과 음성 대화를 지원한
@@ -3025,9 +3033,9 @@
               </div>
             </article>
             <article class="project-row">
-              <div class="project-no">03</div>
+              <div class="project-no">04</div>
               <div class="project-main">
-                <h3>AI 동물 캐릭터 생성 서비스 <span class="note">7-8p</span></h3>
+                <h3>AI 동물 캐릭터 생성 서비스 <span class="note">9-10p</span></h3>
                 <p>
                   얼굴 특징 분석과 생성형 AI를 결합해 개인 맞춤형 동물 캐릭터
                   도안을 생성한 서비스
@@ -3039,11 +3047,11 @@
               </div>
             </article>
             <article class="project-row">
-              <div class="project-no">05</div>
+              <div class="project-no">01</div>
               <div class="project-main">
                 <h3>
                   THING — 실시간 모방 텐던 로봇 손
-                  <span class="note">11-12p</span>
+                  <span class="note">3-4p</span>
                 </h3>
                 <p>
                   손 랜드마크를 7축 명령으로 변환해 로봇 손을 제어하고 동작
@@ -3140,7 +3148,7 @@
       </section>
       <section class="page" id="p3">
         <div class="project-hero">
-          <small>PROJECT 01</small>
+          <small>PROJECT 02</small>
           <h2>ROS2 기반 알약 분류 및 자율 배달 로봇 시스템</h2>
           <p>Vision–Manipulator–AMR 통합 End-to-End 로봇 시스템</p>
         </div>
@@ -3223,7 +3231,7 @@
             </tbody>
           </table>
         </section>
-        <div class="page-number">- 3 -</div>
+        <div class="page-number">- 5 -</div>
       </section>
       <section class="page trouble-page" id="p4">
         <section class="mini-section project-images-section">
@@ -3333,14 +3341,14 @@
             </ul>
           </div>
         </section>
-        <div class="page-number">- 4 -</div>
+        <div class="page-number">- 6 -</div>
       </section>
       <section class="page" id="p5">
         <div
           class="project-hero"
           style="background: linear-gradient(135deg, #0f766e, #14b8a6)"
         >
-          <small>PROJECT 02</small>
+          <small>PROJECT 03</small>
           <h2>수도관 누수 지점 예측 AI 모델</h2>
           <p>
             센서 데이터 신뢰성 검증과 알고리즘 비교를 통해 누수 지점 예측 모델을
@@ -3415,7 +3423,7 @@
             </tbody>
           </table>
         </section>
-        <div class="page-number">- 5 -</div>
+        <div class="page-number">- 7 -</div>
       </section>
       <section class="page trouble-page" id="p6">
         <section class="mini-section project-images-section">
@@ -3515,14 +3523,14 @@
             </ul>
           </div>
         </section>
-        <div class="page-number">- 6 -</div>
+        <div class="page-number">- 8 -</div>
       </section>
       <section class="page" id="p9">
         <div
           class="project-hero"
           style="background: linear-gradient(135deg, #7c3aed, #2563eb)"
         >
-          <small>PROJECT 04</small>
+          <small>PROJECT 05</small>
           <h2>RAG-Vision 기반 치매 예방 챗봇</h2>
           <p>
              Vision AI·RAG 기반 치매 예방 챗봇
@@ -3606,7 +3614,7 @@
             </tbody>
           </table>
         </section>
-        <div class="page-number">- 9 -</div>
+        <div class="page-number">- 11 -</div>
       </section>
       <section class="page trouble-page" id="p10">
         <section class="mini-section project-images-section">
@@ -3706,14 +3714,14 @@
             </ul>
           </div>
         </section>
-        <div class="page-number">- 10 -</div>
+        <div class="page-number">- 12 -</div>
       </section>
       <section class="page" id="p7">
         <div
           class="project-hero"
           style="background: linear-gradient(135deg, #f97316, #fb923c)"
         >
-          <small>PROJECT 03</small>
+          <small>PROJECT 04</small>
           <h2>AI 동물 캐릭터 생성 서비스</h2>
           <p>
             UML 기반 설계, 얼굴 특징 분석, 딥러닝 분류, 생성형 AI 이미지 생성을
@@ -3800,7 +3808,7 @@
             </tbody>
           </table>
         </section>
-        <div class="page-number">- 7 -</div>
+        <div class="page-number">- 9 -</div>
       </section>
       <section class="page trouble-page" id="p8">
         <section class="mini-section project-images-section">
@@ -3900,14 +3908,14 @@
             </ul>
           </div>
         </section>
-        <div class="page-number">- 8 -</div>
+        <div class="page-number">- 10 -</div>
       </section>
       <section class="page" id="p11">
         <div
           class="project-hero"
           style="background: linear-gradient(135deg, #0369a1, #0f766e)"
         >
-          <small>PROJECT 05</small>
+          <small>PROJECT 01</small>
           <h2>THING — 실시간 모방 텐던 로봇 손</h2>
           <p>
             MediaPipe·ROS2·DYNAMIXEL을 연결한 Physical AI 교육용 로봇 손
@@ -3985,7 +3993,7 @@
             </tbody>
           </table>
         </section>
-        <div class="page-number">- 11 -</div>
+        <div class="page-number">- 3 -</div>
       </section>
       <section class="page trouble-page" id="p12">
         <section class="mini-section project-images-section">
@@ -4076,7 +4084,7 @@
             </ul>
           </div>
         </section>
-        <div class="page-number">- 12 -</div>
+        <div class="page-number">- 4 -</div>
       </section>
     </main>
   </body>
