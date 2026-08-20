@@ -1800,17 +1800,14 @@
         display: none;
       }
       #p1 .timeline {
-        width: 100%;
+        width: min(100%, 570px);
         margin: 0 auto;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: repeat(3, auto);
-        grid-auto-flow: column;
-        gap: 10px 14px;
-        align-items: stretch;
+        grid-template-columns: 1fr;
+        gap: 10px;
       }
       #p1 .event {
         text-align: left;
-        grid-template-columns: 68px minmax(0, 1fr);
+        grid-template-columns: 68px 1fr;
         min-height: 82px;
         align-items: center;
         padding: 12px 14px;
@@ -1850,11 +1847,32 @@
       }
       #p1 .event .bullets {
         display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 3px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3px 12px;
       }
       #p1 .event .bullets li {
         margin: 0;
+      }
+      #p1 .event.part-time-event {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      #p1 .part-time-list {
+        display: grid;
+        gap: 5px;
+      }
+      #p1 .part-time-entry {
+        display: grid;
+        grid-template-columns: 112px minmax(0, 1fr);
+        gap: 8px;
+        align-items: baseline;
+      }
+      #p1 .part-time-entry .sub {
+        margin: 0;
+      }
+      #p1 .part-time-detail {
+        font-size: 11.4px;
+        line-height: 1.4;
+        color: #475569;
       }
       .awards-cert-section {
         margin-bottom: 0;
@@ -1946,6 +1964,7 @@
       #p1 .awards:first-child .award:nth-child(2) { order: 7; }
       #p1 .awards:first-child .award:nth-child(3) { order: 8; }
       #p1 .awards:first-child .award:nth-child(4) { order: 9; }
+      #p1 .awards:first-child .award:nth-child(5) { order: 10; }
       #p1 .cert-row {
         margin: 0;
       }
@@ -2100,11 +2119,6 @@
           box-shadow: none;
           padding: 42px 24px 58px;
         }
-        #p1 .timeline {
-          grid-template-columns: 1fr;
-          grid-template-rows: none;
-          grid-auto-flow: row;
-        }
         .profile,
         .row-block,
         .event,
@@ -2254,38 +2268,6 @@
                   </ul>
                 </div>
               </div>
-              <div class="event">
-                <div class="date long-date">병장 만기 전역</div>
-                <div>
-                  <h3>제1 지상작전사령부 복무</h3>
-                  <div class="sub">정보통신여단 312통신대대 무선통신병과</div>
-                  <ul class="bullets">
-                    <li>분대장 임무 수행</li>
-                    <li>유격 조교 임무 수행</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="event">
-                <div class="date long-date">아르바이트</div>
-                <div>
-                  <h3>맥도날드 근무</h3>
-                  <div class="sub">고객 경험 리더 GEL로 근무</div>
-                  <ul class="bullets">
-                    <li>(카운터, 그릴, 드라이브스루) 올라운더</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="event">
-                <div class="date long-date">아르바이트</div>
-                <div>
-                  <h3>서점 근무</h3>
-                  <div class="sub">1인 매장 관리</div>
-                  <ul class="bullets">
-                    <li>출판사 담당자 응대</li>
-                    <li>고객 응대</li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -2320,6 +2302,14 @@
                   </div>
                   <div class="result">장려상</div>
                   <div class="year">2024.11</div>
+                </div>
+                <div class="award">
+                  <div>
+                    <b>학생 창업 유망팀 U300+</b
+                    ><span>외국인 대상 소도시 관광 체험 앱</span>
+                  </div>
+                  <div class="result">참여</div>
+                  <div class="year">2024.07</div>
                 </div>
                 <div class="award">
                   <div>
@@ -2381,7 +2371,6 @@
                 <div class="cert-item"><b>SQLD</b></div>
                 <div class="cert-item"><b>삼성 SW 역량테스트 A형</b></div>
                 <div class="cert-item"><b>TOEIC SPEAKING IM3</b></div>
-                <div class="cert-item"><b>운전면허 1종</b></div>
               </div>
             </div>
             </div>
@@ -3336,7 +3325,7 @@
           </p>
         </div>
         <div class="meta">
-          <div><b>기간:</b> 2026.07-2026.08 · 3주</div>
+          <div><b>기간:</b> 2026.07-2026.08</div>
           <div><b>역할:</b> EMB/AI · Vision AI 및 시스템 통합</div>
           <div><b>개발 인원:</b> 6명</div>
         </div>
@@ -3434,7 +3423,7 @@
           <h3 class="mini-title">담당 역할</h3>
           <ul class="bullets">
             <li>
-              요구사항과 시스템 구조를 설계하고, Jira 스프린트·백로그와 GitLab 브랜치·Merge Request를 </br>관리하여 팀의 일정과 형상 통합 주도
+              요구사항과 시스템 구조를 설계하고, Jira 스프린트·백로그와 GitLab 브랜치, Merge Request를 </br>관리하여 팀의 일정과 형상 통합 주도
             </li>
             <li>
               MediaPipe의 21개 3D 손 랜드마크와 관절각을 로봇 손의 7개 논리축 목표값으로 변환
@@ -3448,7 +3437,40 @@
           <h3 class="mini-title">트러블슈팅</h3>
           <div class="trouble-grid">
             <article class="trouble-card">
-              <h3>1. 손 크기·카메라 거리 변화로 인한 엄지축 흔들림</h3>
+              <h3>1. 하드웨어 의존성과 분산 통신으로 인한 폭포수 방식의 한계</h3>
+              <p>
+                <b>문제:</b> 문제: 텐던 장력, 모터 가동범위, Vision의 7축 값, 
+                ROS 2 토픽과 QoS는 실제 하드웨어를 연결해야 검증할 수 있었습니다. 
+                폭포수 방식에서는 통합 단계마다 기존 설계를 반복해서 수정해야 했고, 
+                이에 따른 재작업으로 전체 개발 일정이 지연됐습니다.
+              </p>
+              <p>
+                <b>해결:</b> 기능별 구현과 통합 테스트를 반복하는 애자일 방식으로
+                전환하고, 발견된 문제를 Jira와 요구사항 명세서에 지속
+                반영했습니다.
+              </p>
+              <p>
+                <b>결과:</b> 요구사항 명세서를 V7까지 구체화하면서 하드웨어와
+                소프트웨어의 불일치를 줄이고 프로젝트를 안정적으로 완성했습니다.
+              </p>
+            </article>
+            <article class="trouble-card">
+              <h3>2. 손가락 굽힘 판단의 정확도 문제</h3>
+              <p>
+                <b>문제:</b> 손가락 끝점의 거리만으로 굽힘을 판단하면 손의 회전과
+                카메라 각도에 따라 값이 달라졌습니다.
+              </p>
+              <p>
+                <b>해결:</b> MCP–PIP–DIP Landmark 벡터의 관절각을 계산하고
+                손가락별 가동범위로 정규화했습니다.
+              </p>
+              <p>
+                <b>결과:</b> 손의 위치와 방향이 변해도 편 손과 굽힌 손을
+                안정적으로 구분할 수 있었습니다.
+              </p>
+            </article>
+            <article class="trouble-card">
+              <h3>3. 손 크기·카메라 거리 변화로 인한 엄지축 흔들림</h3>
               <p>
                 <b>문제:</b> 픽셀 거리만 사용하면 사용자와 촬영 거리에 따라 엄지
                 대립·벌림 값이 달라지고 축 간 간섭이 발생했습니다.
@@ -3463,7 +3485,7 @@
               </p>
             </article>
             <article class="trouble-card">
-              <h3>2. 영상 프레임 누적으로 커지는 모방 지연</h3>
+              <h3>4. 영상 프레임 누적으로 커지는 모방 지연</h3>
               <p>
                 <b>문제:</b> 처리 속도보다 입력이 빠르면 오래된 프레임이 큐에
                 쌓여 화면과 로봇 동작이 현재 손 자세보다 늦게 따라왔습니다.
@@ -3484,16 +3506,16 @@
           <div class="result-box">
             <ul>
               <li>
-                21개 손 랜드마크 → 7축 목표 → 7개 모터로 이어지는 실시간 모방
-                제어를 완성하고 Wave·Pinch·원통 파지 시연을 수행했습니다.
+                SSAFY 공통 프로젝트에서 1위를 수상하며 
+                프로젝트의 완성도와 기술적 성과를 인정받았습니다.
               </li>
               <li>
-                Vision, ROS2 제어, 안전 상태, 웹 관제, 데이터 저장을
-                Jetson–Raspberry Pi–Laptop–EC2 구조로 통합했습니다.
+                21개 손 랜드마크 → 7축 목표 → 7개 모터로 이어지는 실시간 모방
+                제어를 완성하고 Wave, Pinch, 원통 파지 시연을 수행했습니다.
               </li>
               <li>
                 Kapandji Test 10/10을 확인하고, 학습에 재사용할 수 있는
-                rosbag2·JSON·CSV 데이터 제공 흐름을 구축했습니다.
+                rosbag2, JSON, CSV 데이터 제공 흐름을 구축했습니다.
               </li>
             </ul>
           </div>
