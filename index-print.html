@@ -106,17 +106,22 @@
       #p2 { order: 2; }
       #p11 { order: 3; }
       #p12 { order: 4; }
-      #p3 { order: 5; }
-      #p4 { order: 6; }
-      #p5 { order: 7; }
-      #p6 { order: 8; }
-      #p7 { order: 9; }
-      #p8 { order: 10; }
-      #p9 { order: 11; }
-      #p10 { order: 12; }
+      #p13 { order: 5; }
+      #p3 { order: 6; }
+      #p4 { order: 7; }
+      #p14 { order: 8; }
+      #p5 { order: 9; }
+      #p6 { order: 10; }
+      #p7 { order: 11; }
+      #p8 { order: 12; }
+      #p16 { order: 13; }
+      #p9 { order: 14; }
+      #p10 { order: 15; }
       .page {
         width: 794px;
+        height: 1123px;
         min-height: 1123px;
+        max-height: 1123px;
         margin: 0 auto 26px;
         background: var(--paper);
         box-shadow: var(--shadow-card);
@@ -398,7 +403,7 @@
         object-fit: contain;
         background: #ffffff;
       }
-      #p10 .project-image-grid .project-image-slot:nth-child(2) {
+      #p9 .project-image-grid .project-image-slot:nth-child(2) {
         align-self: center;
       }
       .project-image-slot.fit-framed {
@@ -2104,6 +2109,58 @@
         top: 8px;
         color: #0f766e;
       }
+      .project-continuation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 44px;
+        margin: 0 0 20px;
+        padding: 9px 12px;
+        border-left: 3px solid rgba(37, 99, 235, 0.34);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+        border-radius: 4px 10px 10px 4px;
+        color: #334155;
+        background: linear-gradient(
+          90deg,
+          rgba(241, 245, 249, 0.88) 0%,
+          rgba(248, 250, 252, 0.5) 72%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        box-shadow: none;
+      }
+      .project-continuation small {
+        flex: 0 0 auto;
+        color: #64748b;
+        font-size: 9.5px;
+        font-weight: 650;
+        letter-spacing: 0.08em;
+      }
+      .project-continuation h2 {
+        min-width: 0;
+        margin: 0;
+        color: #334155;
+        font-size: 15.5px;
+        line-height: 1.25;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        text-align: right;
+      }
+      .project-support-page > .mini-section:first-of-type,
+      .project-resolution-page > .mini-section:first-of-type {
+        margin-top: 0;
+      }
+      .print-fit {
+        display: flow-root;
+        width: 100%;
+        transform-origin: top center;
+      }
+      .print-fit > :first-child {
+        margin-top: 0;
+      }
+      .print-fit > :last-child {
+        margin-bottom: 0;
+      }
 
       #p11 .project-hero {
         display: grid;
@@ -2215,7 +2272,7 @@
         color: #78350f;
       }
 
-      @media (max-width: 840px) {
+      @media screen and (max-width: 840px) {
         #p11 .project-hero {
           grid-template-columns: 1fr;
           grid-template-areas:
@@ -2255,7 +2312,9 @@
         }
         .page {
           width: 100%;
+          height: auto;
           min-height: auto;
+          max-height: none;
           margin: 0;
           box-shadow: none;
           padding: 42px 24px 58px;
@@ -2291,8 +2350,14 @@
         }
       }
       @media print {
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
         html,
         body {
+          width: 210mm;
+          margin: 0;
           background: white;
         }
         .toolbar {
@@ -2303,11 +2368,19 @@
         }
         .page {
           width: 210mm;
-          min-height: 297mm;
+          height: 297mm;
+          min-height: 0;
+          max-height: 297mm;
           margin: 0;
           box-shadow: none;
           page-break-after: always;
+          break-after: page;
+          break-inside: avoid;
           padding: 18mm 22mm 14mm;
+          overflow: hidden;
+        }
+        #p1 {
+          padding-top: 18mm;
         }
         .page:before {
           display: none;
@@ -2316,15 +2389,20 @@
           page-break-after: auto;
         }
         .page-number {
+          display: block;
           bottom: 8mm;
         }
-        .section {
-          page-break-inside: avoid;
+        .print-fit {
+          width: 100%;
+          transform-origin: top center;
         }
         .project-hero,
         .award,
-        .mini-section {
+        .trouble-card,
+        .project-image-slot,
+        .architecture-image-slot {
           page-break-inside: avoid;
+          break-inside: avoid;
         }
       }
     </style>
@@ -2543,7 +2621,7 @@
               <div class="project-main">
                 <h3>
                   ROS2 기반 알약 분류 및 자율 배달 로봇
-                  <span class="note">5-6p</span>
+                  <span class="note">6-8p</span>
                 </h3>
                 <p>
                   카메라 3D 좌표 변환부터 ROS2 기반 Pick &amp; Place, AMR 배송까지
@@ -2558,7 +2636,7 @@
             <article class="project-row">
               <div class="project-no">03</div>
               <div class="project-main">
-                <h3>수도관 누수 지점 예측 AI <span class="note">7-8p</span></h3>
+                <h3>수도관 누수 지점 예측 AI <span class="note">9-10p</span></h3>
                 <p>
                   AI HUB 센서 데이터 신뢰성을 검증하고 KNN 93.56% 정확도로 누수
                   지점을 예측한 AI 모델
@@ -2573,7 +2651,7 @@
               <div class="project-no">05</div>
               <div class="project-main">
                 <h3>
-                  RAG-Vision 치매 예방 챗봇 <span class="note">11-12p</span>
+                  RAG-Vision 치매 예방 챗봇 <span class="note">14-15p</span>
                 </h3>
                 <p>
                   RAG와 Vision AI를 결합해 과거 기억 회상과 음성 대화를 지원한
@@ -2588,7 +2666,7 @@
             <article class="project-row">
               <div class="project-no">04</div>
               <div class="project-main">
-                <h3>AI 동물 캐릭터 생성 서비스 <span class="note">9-10p</span></h3>
+                <h3>AI 동물 캐릭터 생성 서비스 <span class="note">11-13p</span></h3>
                 <p>
                   얼굴 특징 분석과 생성형 AI를 결합해 개인 맞춤형 동물 캐릭터
                   도안을 생성한 서비스
@@ -2604,7 +2682,7 @@
               <div class="project-main">
                 <h3>
                   ROS2 기반 Tendon-Driven 다관절 로봇 손
-                  <span class="note">3-4p</span>
+                  <span class="note">3-5p</span>
                 </h3>
                 <p>
                   손 랜드마크를 7축 명령으로 변환해 로봇 손을 제어하고 동작
@@ -3660,5 +3738,250 @@
         <div class="page-number">- 4 -</div>
       </section>
     </main>
+    <script>
+      (() => {
+        const book = document.querySelector(".book");
+        const projectPlans = [
+          { overview: "p11", middle: "p12", final: "p13", totalPages: 3 },
+          { overview: "p3", middle: "p4", final: "p14", totalPages: 3 },
+          {
+            overview: "p5",
+            middle: "p6",
+            totalPages: 2,
+            compact: true,
+          },
+          { overview: "p7", middle: "p8", final: "p16", totalPages: 3 },
+          {
+            overview: "p9",
+            middle: "p10",
+            totalPages: 2,
+            compact: true,
+          },
+        ];
+
+        const makeContinuationHeader = (overview, part, totalPages) => {
+          const header = document.createElement("header");
+          header.className = "project-continuation";
+
+          const projectNo =
+            overview.querySelector(".project-hero small")?.textContent.trim() ??
+            "PROJECT";
+          const title =
+            overview.querySelector(".project-hero h2")?.textContent.trim() ??
+            "프로젝트";
+          const label = document.createElement("small");
+          const heading = document.createElement("h2");
+
+          label.textContent = `${projectNo} · ${part}/${totalPages}`;
+          heading.textContent = title;
+          header.append(label, heading);
+          return header;
+        };
+
+        projectPlans.forEach(
+          ({
+            overview: overviewId,
+            middle: middleId,
+            final: finalId,
+            totalPages = 3,
+            compact = false,
+          }) => {
+            const overview = document.getElementById(overviewId);
+            const middle = document.getElementById(middleId);
+            if (!overview || !middle) return;
+
+            const environment = overview
+              .querySelector(".env-table")
+              ?.closest(".mini-section");
+            const images = middle.querySelector(".project-images-section");
+            const role = middle.querySelector(".role-summary");
+            const troubleshooting = middle
+              .querySelector(".trouble-grid")
+              ?.closest(".mini-section");
+            const result = middle
+              .querySelector(".result-box")
+              ?.closest(".mini-section");
+
+            overview.classList.add("project-overview-page");
+            middle.classList.add("project-support-page");
+            middle.insertBefore(
+              makeContinuationHeader(overview, 2, totalPages),
+              middle.firstChild,
+            );
+            if (compact) {
+              [images, environment]
+                .filter(Boolean)
+                .forEach((section) => overview.appendChild(section));
+              [role, result, troubleshooting]
+                .filter(Boolean)
+                .forEach((section) => middle.appendChild(section));
+              return;
+            }
+            [images, environment, role, result]
+              .filter(Boolean)
+              .forEach((section) => middle.appendChild(section));
+
+            const finalPage = document.createElement("section");
+            finalPage.className =
+              "page trouble-page project-resolution-page";
+            finalPage.id = finalId;
+            finalPage.appendChild(
+              makeContinuationHeader(overview, 3, totalPages),
+            );
+            [troubleshooting]
+              .filter(Boolean)
+              .forEach((section) => finalPage.appendChild(section));
+            book.appendChild(finalPage);
+          },
+        );
+
+        const orderedPageIds = [
+          "p1",
+          "p2",
+          "p11",
+          "p12",
+          "p13",
+          "p3",
+          "p4",
+          "p14",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p16",
+          "p9",
+          "p10",
+        ];
+        orderedPageIds.forEach((id, index) => {
+          const page = document.getElementById(id);
+          if (!page) return;
+          page
+            .querySelectorAll(":scope > .page-number")
+            .forEach((number) => number.remove());
+          const pageNumber = document.createElement("div");
+          pageNumber.className = "page-number";
+          pageNumber.setAttribute("aria-hidden", "true");
+          pageNumber.textContent = `- ${index + 1} -`;
+          page.appendChild(pageNumber);
+          book.appendChild(page);
+        });
+
+        const pages = Array.from(document.querySelectorAll(".page"));
+
+        pages.forEach((page) => {
+          const content = Array.from(page.children).filter(
+            (child) => !child.classList.contains("page-number"),
+          );
+          if (!content.length) return;
+
+          const wrapper = document.createElement("div");
+          wrapper.className = "print-fit";
+          page.insertBefore(wrapper, content[0]);
+          content.forEach((child) => wrapper.appendChild(child));
+        });
+
+        const fitPages = () => {
+          pages.forEach((page) => {
+            const wrapper = page.querySelector(".print-fit");
+            if (!wrapper) return;
+
+            wrapper.style.transform = "none";
+            delete page.dataset.printOffset;
+          });
+
+          const isCompactScreen =
+            window.matchMedia("(max-width: 840px)").matches &&
+            !window.matchMedia("print").matches;
+          if (isCompactScreen) {
+            pages.forEach((page) => {
+              page.dataset.printScale = "1.0000";
+            });
+            return;
+          }
+
+          const verticalSafety = 4;
+          const metrics = new Map(
+            pages.map((page) => {
+              const wrapper = page.querySelector(".print-fit");
+              const style = window.getComputedStyle(page);
+              const paddingTop = Number.parseFloat(style.paddingTop) || 0;
+              const paddingBottom = Number.parseFloat(style.paddingBottom) || 0;
+              const availableHeight = Math.max(
+                0,
+                page.clientHeight -
+                  paddingTop -
+                  paddingBottom -
+                  verticalSafety,
+              );
+              return [
+                page,
+                {
+                  wrapper,
+                  availableHeight,
+                  naturalHeight: wrapper
+                    ? Math.max(
+                        wrapper.scrollHeight,
+                        wrapper.getBoundingClientRect().height,
+                      )
+                    : 0,
+                },
+              ];
+            }),
+          );
+
+          const sharedScale = Math.min(
+            1,
+            ...pages.map((page) => {
+              const metric = metrics.get(page);
+              return metric?.naturalHeight
+                ? metric.availableHeight / metric.naturalHeight
+                : 1;
+            }),
+          );
+
+          pages.forEach((page) => {
+            const metric = metrics.get(page);
+            if (!metric?.wrapper || !metric.naturalHeight) return;
+            const renderedHeight = metric.naturalHeight * sharedScale;
+            const offset = Math.max(
+              0,
+              (metric.availableHeight - renderedHeight) / 2,
+            );
+
+            metric.wrapper.style.transform = `translateY(${offset.toFixed(
+              2,
+            )}px) scale(${sharedScale.toFixed(4)})`;
+            page.dataset.printScale = sharedScale.toFixed(4);
+            page.dataset.printOffset = offset.toFixed(2);
+          });
+        };
+
+        const images = Array.from(document.images);
+        const imageReady = Promise.all(
+          images.map((image) =>
+            image.complete
+              ? Promise.resolve()
+              : new Promise((resolve) => {
+                  image.addEventListener("load", resolve, { once: true });
+                  image.addEventListener("error", resolve, { once: true });
+                }),
+          ),
+        );
+        const fontReady = document.fonts?.ready ?? Promise.resolve();
+        Promise.all([imageReady, fontReady]).then(() =>
+          requestAnimationFrame(() => requestAnimationFrame(fitPages)),
+        );
+
+        window.addEventListener("beforeprint", () => {
+          const isAlreadyFit = pages.every(
+            (page) => page.dataset.printScale,
+          );
+          if (!isAlreadyFit) fitPages();
+        });
+        window.addEventListener("resize", () =>
+          requestAnimationFrame(fitPages),
+        );
+      })();
+    </script>
   </body>
 </html>
