@@ -765,70 +765,68 @@
       }
 
       .ai-capability-section {
-        margin-bottom: 24px;
+        margin-bottom: 20px;
       }
       .ai-capability-section .section-title {
-        margin-bottom: 11px;
+        margin-bottom: 9px;
       }
       .ai-capability-lead {
-        margin: -2px 0 12px;
+        margin: -2px 0 10px;
         color: #475569;
-        font-size: 11.2px;
-        line-height: 1.45;
+        font-size: 10.9px;
+        line-height: 1.42;
         word-break: keep-all;
       }
       .ai-capability-flow {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 8px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
       }
       .ai-capability-card {
-        --ai-accent: #2563eb;
-        --ai-soft: #eff6ff;
+        --ai-accent: #475569;
+        --ai-soft: #f8fafc;
         position: relative;
-        display: grid;
-        grid-template-columns: 104px minmax(0, 1fr);
-        gap: 14px;
-        align-items: center;
-        min-height: 66px;
-        padding: 10px 14px 10px 16px;
+        min-height: 182px;
+        padding: 14px 15px 13px;
         overflow: hidden;
-        border-radius: 14px;
-        background: linear-gradient(135deg, #ffffff, var(--ai-soft));
+        border-radius: 16px;
+        background:
+          radial-gradient(circle at 0 0, color-mix(in srgb, var(--ai-accent) 8%, transparent), transparent 38%),
+          linear-gradient(135deg, #ffffff, var(--ai-soft));
         box-shadow:
-          0 0 0 1px rgba(100, 116, 139, 0.14),
-          0 12px 26px -26px rgba(15, 23, 42, 0.52);
+          0 0 0 1px rgba(100, 116, 139, 0.16),
+          0 14px 28px -26px rgba(15, 23, 42, 0.5);
       }
       .ai-capability-card::before {
         content: "";
         position: absolute;
         top: 0;
-        bottom: 0;
         left: 0;
-        width: 4px;
-        background: var(--ai-accent);
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--ai-accent), color-mix(in srgb, var(--ai-accent) 38%, #ffffff));
       }
-      .ai-capability-card:nth-child(2) {
-        --ai-accent: #7c3aed;
-        --ai-soft: #f5f3ff;
+      .ai-capability-card.stage-hermes {
+        --ai-accent: #b7791f;
+        --ai-soft: #fffbeb;
       }
-      .ai-capability-card:nth-child(3) {
-        --ai-accent: #0f766e;
-        --ai-soft: #ecfdf5;
+      .ai-capability-card.stage-codex {
+        --ai-accent: #2563eb;
+        --ai-soft: #eff6ff;
       }
       .ai-capability-head {
         display: grid;
-        grid-template-columns: 34px minmax(0, 1fr);
-        gap: 9px;
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 10px;
         align-items: center;
-        align-self: stretch;
-        padding: 3px 12px 3px 1px;
-        border-right: 1px solid rgba(100, 116, 139, 0.18);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(100, 116, 139, 0.16);
       }
       .ai-capability-brand {
-        width: 34px;
-        height: 34px;
-        border-radius: 10px;
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -842,44 +840,49 @@
         height: 100%;
         object-fit: contain;
       }
-      .ai-capability-brand.developer img {
-        object-fit: cover;
-        object-position: center 18%;
-      }
       .ai-capability-head h3 {
         margin: 0;
         color: #0f172a;
-        font-size: 14.5px;
-        line-height: 1.1;
-        font-weight: 750;
-        letter-spacing: -0.025em;
+        font-size: 15px;
+        line-height: 1.15;
+        font-weight: 780;
+        letter-spacing: -0.03em;
+      }
+      .ai-capability-role {
+        margin: 4px 0 0;
+        color: var(--ai-accent);
+        font-size: 10px;
+        line-height: 1.3;
+        font-weight: 650;
       }
       .ai-capability-points {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 4px 14px;
+        gap: 7px;
         margin: 0;
         padding: 0;
         list-style: none;
         color: #334155;
-        font-size: 10.4px;
-        line-height: 1.32;
+        font-size: 10px;
+        line-height: 1.38;
       }
       .ai-capability-points li {
         position: relative;
-        margin: 0;
-        padding-left: 10px;
+        padding-left: 13px;
         word-break: keep-all;
       }
       .ai-capability-points li::before {
         content: "";
         position: absolute;
-        top: 0.48em;
+        top: 0.5em;
         left: 0;
-        width: 4px;
-        height: 4px;
+        width: 5px;
+        height: 5px;
         border-radius: 999px;
         background: var(--ai-accent);
+      }
+      .ai-capability-points strong {
+        color: var(--ai-accent);
+        font-weight: 750;
       }
 
       .ppt-skill-board {
@@ -894,15 +897,15 @@
       }
       .ppt-skill-item {
         display: grid;
-        grid-template-columns: 30px minmax(0, 1fr);
-        gap: 7px;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 8px;
         align-items: start;
         align-self: stretch;
         justify-self: stretch;
         width: 100%;
         height: 100%;
         min-height: 0;
-        padding: 8px 9px;
+        padding: 9px 10px;
         border-radius: 13px;
         background: linear-gradient(180deg, #ffffff, #f8fbff);
         box-shadow:
@@ -911,7 +914,7 @@
       }
       .ppt-skill-item > div {
         display: grid;
-        grid-template-rows: auto minmax(0, 1fr);
+        grid-template-rows: 34px minmax(0, 1fr);
         min-width: 0;
         height: 100%;
       }
@@ -921,33 +924,40 @@
         object-fit: contain;
         background: #ffffff;
         margin-top: 2px;
+        justify-self: center;
       }
       #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) {
         position: relative;
-        column-gap: 9px;
+        column-gap: 8px;
+      }
+      #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) > div {
+        grid-column: 2;
       }
       #p-skills .ppt-skill-icon[alt="Git"] {
-        width: 13px;
-        height: 13px;
-        margin: 1px 0 0 1px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 12px;
+        height: 12px;
+        margin: 0;
       }
       #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) .ppt-skill-name {
-        font-size: 11.8px;
-        line-height: 1.18;
+        font-size: 11.6px;
+        line-height: 1.15;
       }
       .git-tool-mark {
         position: absolute;
         z-index: 1;
-        width: 13px;
-        height: 13px;
+        width: 12px;
+        height: 12px;
       }
       .gitlab-mark {
-        top: 8px;
-        left: 23px;
+        top: 10px;
+        left: 27px;
       }
       .jira-mark {
-        top: 22px;
-        left: 16px;
+        top: 26px;
+        left: 18px;
       }
       .vision-tool-icons {
         width: 34px;
@@ -972,13 +982,12 @@
       }
       .vision-tool-card .ppt-skill-head {
         display: grid;
-        gap: 4px;
-        align-content: start;
+        gap: 3px;
       }
       .vision-tool-card .ppt-skill-name {
         font-size: 11.6px;
-        line-height: 1.18;
-        white-space: normal;
+        line-height: 1.15;
+        white-space: nowrap;
       }
       .vision-tool-card .ppt-skill-level {
         gap: 3px;
@@ -989,27 +998,33 @@
       }
       .ppt-skill-head {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        align-items: center;
-        gap: 6px;
-        margin-bottom: 3px;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: 16px 9px;
+        align-content: start;
+        align-items: start;
+        gap: 3px;
+        margin: 0;
       }
       .ppt-skill-name {
-        font-size: 13.6px;
-        line-height: 1;
+        display: block;
+        min-width: 0;
+        font-size: 11.6px;
+        line-height: 1.15;
         font-weight: 650;
         color: #111827;
-        letter-spacing: -0.025em;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
       }
       .ppt-skill-level {
         display: inline-flex;
-        justify-self: end;
-        gap: 4px;
+        justify-self: start;
+        align-self: start;
+        gap: 3px;
       }
       .ppt-skill-level span {
-        width: 10px;
-        height: 10px;
-        border-radius: 3px;
+        width: 8px;
+        height: 8px;
+        border-radius: 2.5px;
         background: #dfe7ef;
         box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.04);
       }
@@ -1025,14 +1040,14 @@
       }
       .ppt-skill-points {
         display: grid;
-        align-content: center;
+        align-content: start;
         gap: 2px;
         margin: 0;
         padding: 0;
         list-style: none;
         color: #334155;
-        font-size: 10.6px;
-        line-height: 1.22;
+        font-size: 10.2px;
+        line-height: 1.24;
       }
       .ppt-skill-points li {
         position: relative;
@@ -1052,8 +1067,8 @@
       }
       #p-skills .ppt-skill-board .ppt-skill-col:nth-child(2) .ppt-skill-item {
         align-items: start;
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding-top: 9px;
+        padding-bottom: 9px;
       }
       #p-skills .ppt-skill-board .ppt-skill-col:nth-child(2) .ppt-skill-icon {
         align-self: start;
@@ -1089,12 +1104,26 @@
       }
       #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) .ppt-skill-head {
         display: grid;
-        gap: 4px;
+        gap: 3px;
         align-content: start;
       }
       #p-skills .vision-tool-card {
         grid-column: 3;
         grid-row: 2;
+      }
+      #p-skills .isaac-skill-card {
+        grid-column: 3;
+        grid-row: 3;
+        grid-template-columns: 34px minmax(0, 1fr);
+      }
+      #p-skills .isaac-skill-card .nvidia-skill-icon {
+        width: 34px;
+        height: 34px;
+        margin-top: 1px;
+      }
+      #p-skills .isaac-skill-card .ppt-skill-name {
+        font-size: 11.6px;
+        line-height: 1.15;
       }
       .project-hero {
         background: linear-gradient(135deg, #2563eb, #06b6d4);
@@ -1892,34 +1921,11 @@
         box-shadow: 0 0 0 1px var(--project-ring);
       }
       #p2 .project-row {
-        --project-soft: #f8fafc;
-        --project-ring: rgba(71, 85, 105, 0.16);
-        --project-shadow: rgba(15, 23, 42, 0.38);
-      }
-      #p2 .project-row:nth-child(1) {
         --project-accent: #1e3a8a;
         --project-accent-2: #64748b;
-        --project-soft: #f8fbff;
-      }
-      #p2 .project-row:nth-child(2) {
-        --project-accent: #0f766e;
-        --project-accent-2: #64748b;
-        --project-soft: #f7fcfb;
-      }
-      #p2 .project-row:nth-child(3) {
-        --project-accent: #4338ca;
-        --project-accent-2: #64748b;
-        --project-soft: #fafaff;
-      }
-      #p2 .project-row:nth-child(4) {
-        --project-accent: #57534e;
-        --project-accent-2: #64748b;
-        --project-soft: #fbfaf8;
-      }
-      #p2 .project-row:nth-child(5) {
-        --project-accent: #0369a1;
-        --project-accent-2: #0f766e;
-        --project-soft: #f4fbff;
+        --project-soft: #f8fafc;
+        --project-ring: rgba(30, 58, 138, 0.14);
+        --project-shadow: rgba(15, 23, 42, 0.34);
       }
       #p2 .project-no,
       #p2 .project-main h3 .note {
@@ -1957,6 +1963,7 @@
       }
       #p2 .project-row:before {
         width: 3px;
+        background: linear-gradient(180deg, #1e3a8a, #64748b) !important;
       }
       #p2 .project-no {
         width: 32px;
@@ -1964,6 +1971,9 @@
         border-radius: 9px;
         font-size: 11px;
         letter-spacing: 0.02em;
+        background: #eff6ff !important;
+        color: #1e3a8a !important;
+        box-shadow: 0 0 0 1px rgba(30, 58, 138, 0.14) !important;
       }
       #p2 .project-main {
         display: grid;
@@ -2130,7 +2140,7 @@
         display: none;
       }
       #p1 .timeline {
-        width: min(100%, 570px);
+        width: 100%;
         margin: 0 auto;
         grid-template-columns: 1fr;
         gap: 10px;
@@ -2765,10 +2775,10 @@
           <div>
             <h1>이정빈</h1>
             <div class="role">
-              Robot Software Developer · 로봇 SW/제어 개발자
+              복잡한 문제를 구조화하고, 끝까지 구현합니다.
             </div>
             <p class="intro">
-              안녕하세요. Vision, Robotics, AI에 관심을 가지고 있으며<br />최신 기술을 빠르게 습득하고 적용하는 개발자 이정빈입니다.
+              안녕하세요. Vision, Robotics, AI에 관심을 가지고 있으며<br />최신 기술을 빠르게 습득하고 적용할 수 있습니다.
             </p>
             <div class="contact">
               <span
@@ -3048,45 +3058,39 @@
             AI는 아이디어와 구현 속도를 높이는 도구로 활용하고, 최종 판단은 직접 실행·테스트한 결과를 기준으로 내립니다.
           </p>
           <div class="ai-capability-flow">
-            <article class="ai-capability-card">
+            <article class="ai-capability-card stage-hermes">
               <div class="ai-capability-head">
                 <span class="ai-capability-brand">
                   <img src="image/hermes-agent-icon.png" alt="Hermes Agent 공식 아이콘" />
                 </span>
-                <h3>Hermes</h3>
+                <div>
+                  <h3>Hermes</h3>
+                  <p class="ai-capability-role">Context 구성 · 문제 정의 · 설계</p>
+                </div>
               </div>
               <ul class="ai-capability-points">
-                <li>요구사항·문제 상황을 바탕으로 아이디어 후보 도출</li>
-                <li>적용 가능한 기술 스택·구현 방향 비교</li>
-                <li>차별화 포인트 구체화 및 핵심 문제 정의</li>
+                <li><strong>MCP·프로젝트 문서 연동</strong>으로 개발 Context 구성</li>
+                <li>요구사항·제약조건을 구조화해 <strong>명확한 Prompt 작성</strong></li>
+                <li>문제 정의 및 다양한 해결 방향 탐색</li>
+                <li>기술 스택·아키텍처의 <strong>대안과 Trade-off 비교</strong></li>
               </ul>
             </article>
-            <article class="ai-capability-card">
+            <article class="ai-capability-card stage-codex">
               <div class="ai-capability-head">
                 <span class="ai-capability-brand">
                   <img src="image/codex-app-icon.png" alt="OpenAI Codex 앱 아이콘" />
                 </span>
-                <h3>Codex</h3>
+                <div>
+                  <h3>Codex</h3>
+                  <p class="ai-capability-role">구조 분석 · 구현 · 검증 · 리뷰</p>
+                </div>
               </div>
               <ul class="ai-capability-points">
-                <li>기존 코드 구조 파악 및 개선 지점 탐색</li>
-                <li>기능 구현과 반복 코드 작성 지원</li>
-                <li>오류 로그 기반 원인 후보 분석·디버깅</li>
-                <li>리팩토링을 통한 가독성·유지보수성 개선</li>
-              </ul>
-            </article>
-            <article class="ai-capability-card">
-              <div class="ai-capability-head">
-                <span class="ai-capability-brand developer">
-                  <img src="image/프로필 흰배경.png" alt="Developer 이정빈" />
-                </span>
-                <h3>Developer</h3>
-              </div>
-              <ul class="ai-capability-points">
-                <li>실제 요구사항과 제약조건 명확화</li>
-                <li>AI 제안을 실행·테스트로 검증</li>
-                <li>기술 대안을 비교해 프로젝트에 적합한 방식 선택</li>
-                <li>최종 아키텍처·구현 방식·적용 범위 결정</li>
+                <li>Context 기반 <strong>기존 코드·시스템 구조 분석</strong></li>
+                <li>기능 구현 및 오류 로그 기반 디버깅</li>
+                <li>생성 코드를 <strong>직접 실행·테스트하며 검증</strong></li>
+                <li>Diff 기반 코드 리뷰 및 리팩토링</li>
+                <li><strong>Hermes와 해결 방법을 교차검증</strong>해 최종 적용</li>
               </ul>
             </article>
           </div>
@@ -3158,6 +3162,23 @@
                     <li>Git 기능별 브랜치 관리</li>
                     <li>GitLab Merge Request 코드 병합</li>
                     <li>Jira 이슈, 스프린트 관리</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="ppt-skill-item isaac-skill-card">
+                <img
+                  class="ppt-skill-icon nvidia-skill-icon"
+                  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYwIDE0NDAiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojNzZiOTAwO308L3N0eWxlPjwvZGVmcz48ZyBpZD0iTlZJRElBX0xvZ28iPjxwYXRoIGlkPSJOVklESUEiIGQ9Ik0xMTUwLjU5Mjg1LDk2MC42ODg1OWwuMDIyOTgsMjI4LjYzMDk0aDY0LjU2Nzkydi0yMjguNjI3MDFsLTY0LjU5MDktLjAwMzkzWk02NDIuNjQ3MjcsOTYwLjM3Nzl2MjI4Ljk0MTYyaDY1LjE0NDEydi0xNzMuODM4MzhsNTAuNDY2LjAxNzI4YzE2LjcxNzc5LDAsMjguNjIzNzEsNC4xNTk4NSwzNi42Nzk0OCwxMi43NTU0OSwxMC4yMTM0NywxMC44ODM3MywxNC4zODE5NywyOC40MjgwOSwxNC4zODE5Nyw2MC41MzY0NnYxMDAuNTI5MTVsNjMuMTA3MjktLjAxMTUuMDExNS0xMjYuNDc3MzdjMC05MC4yNzgzOC01Ny41NDY1Mi0xMDIuNDUyNzYtMTEzLjg0Mjg0LTEwMi40NTI3NmgtMTE1Ljk0NzUyTTEyNTQuNTU4ODQsOTYwLjY5NjI0djIyOC42MjMyOGgxMDQuNzI5MTRjNTUuNzk5NDcsMCw3NC4wMTExNi05LjI4MDQzLDkzLjcwNzM0LTMwLjA4Njk3LDEzLjkyMzYtMTQuNjA2MjMsMjIuOTE4MDktNDYuNjcwNjEsMjIuOTE4MDktODEuNzExNDIsMC0zMi4xMzUwOC03LjYxMzctNjAuODA0OTItMjAuODk4NjUtNzguNjU4MDEtMjMuOTIxMDQtMzEuOTI2MTItNTguMzg0Ny0zOC4xNjY4OS0xMDkuODM0NC0zOC4xNjY4OWgtOTAuNjIxNTNaTTEzMTguNjA4NjksMTAxMC40Nzc2MWgyNy43NjI1NmM0MC4yNzY1LDAsNjYuMzI0NiwxOC4wODY5OCw2Ni4zMjQ2LDY1LjAxNjQzLDAsNDYuOTQxMDMtMjYuMDQ4MSw2NS4wMjgwMS02Ni4zMjQ2LDY1LjAyODAxaC0yNy43NjI1NnYtMTMwLjA0NDQ0Wk0xMDU3LjQ5NTI5LDk2MC42OTYyNGwtNTMuODg4MjMsMTgxLjE5NzE3LTUxLjYzNjg2LTE4MS4xODU1OS02OS43MDE2Ni0uMDExNTksNzMuNzQ0NDcsMjI4LjYyMzI4aDkzLjA2M2w3NC4zMjM4MS0yMjguNjIzMjhoLTY1LjkwNDUzWk0xNTA1Ljk2MDE0LDExODkuMzE5NTJoNjQuNTc5MzF2LTIyOC42MTE2OWwtNjQuNTk0NjMtLjAxMTU5LjAxNTMyLDIyOC42MjMyOFpNMTY4Ni45Njk0OCw5NjAuNzc4NzNsLTkwLjE2MzM1LDIyOC40NjIwNWg2My42Njg0N2wxNC4yNjQ3My00MC4zNzk5NmgxMDYuNzA0NTlsMTMuNTAzNTMsNDAuMzc5OTZoNjkuMTI2NDNsLTkwLjg1MTY5LTIyOC40ODExLTg2LjI1MjcxLjAxOTA1Wk0xNzI4Ljg4MzY0LDEwMDIuNDU5MTZsMzkuMTE0MjgsMTA3LjAzMDUyaC03OS40NjM2M2w0MC4zNDkzNS0xMDcuMDMwNTJaIi8+PHBhdGggaWQ9IkV5ZV9NYXJrIiBjbGFzcz0iY2xzLTEiIGQ9Ik0xMDY1LjIyODczLDQyNS4xNDU3N3YtNTQuOTI2ODljNS4zMjk1Ny0uMzc3NjQsMTAuNzE2ODgtLjY2MjYsMTYuMjA2NzEtLjgzNjAxLDE1MC4yMjMzNC00LjcyMDczLDI0OC43ODA1NywxMjkuMDc5NzksMjQ4Ljc4MDU3LDEyOS4wNzk3OSwwLDAtMTA2LjQ0NjMzLDE0Ny44NDQ4OC0yMjAuNTc3NzEsMTQ3Ljg0NDg4LTE2LjQzNzg2LDAtMzEuMTQ4NjgtMi42NDk0NS00NC40MDk1Ny03LjEwMTcydi0xNjYuNTU0NDFjNTguNDgwOTYsNy4wNjQ0MSw3MC4yMzkyOSwzMi44OTc2NSwxMDUuNDA4ODEsOTEuNTAzODJsNzguMTk3NTEtNjUuOTMxMzhzLTU3LjA4MTExLTc0Ljg2NTU5LTE1My4zMDYyMy03NC44NjU1OWMtMTAuNDcwNjEsMC0yMC40NzY5Ny43Mzg0MS0zMC4zMDAwOSwxLjc4NzUxTTEwNjUuMjI4NzMsMjQzLjcwNjA3djgyLjA0MzFjNS4zOTEwNC0uNDI3NzIsMTAuNzg4NzYtLjc2ODA2LDE2LjIwNjcxLS45NjU2MiwyMDguOTA4NTQtNy4wMzc1LDM0NS4wMTA2MSwxNzEuMzI3NzgsMzQ1LjAxMDYxLDE3MS4zMjc3OCwwLDAtMTU2LjMzMjUxLDE5MC4wOTY4LTMxOS4xOTI0OCwxOTAuMDk2OC0xNC45MjM3MSwwLTI4Ljg5NjMxLTEuMzc4MDQtNDIuMDI0ODQtMy43MDI0N3Y1MC43MTM0MmMxMS4yMjgwOCwxLjQyNjc1LDIyLjg1Nzc4LDIuMjY3ODcsMzQuOTk0OTQsMi4yNjc4NywxNTEuNTYzODgsMCwyNjEuMTY4OTEtNzcuMzk0MjYsMzY3LjMwNDc1LTE2OS4wMDM1NSwxNy41ODI3OSwxNC4wOTAzMiw4OS42Mjg2Niw0OC4zNjUwMywxMDQuNDQ0MTYsNjMuMzg3NC0xMDAuOTIxMTYsODQuNDc2NzQtMzM2LjA5MjY0LDE1Mi41NjQ2NC00NjkuNDE2OCwxNTIuNTY0NjQtMTIuODQ4NjcsMC0yNS4yMDU0LS43NzQ3NC0zNy4zMjcwNC0xLjk0MDg5djcxLjI3MjUxaDU3Ni4wNTMwNFYyNDMuNzA2MDdoLTU3Ni4wNTMwNFpNMTA2NS4yMjg3Myw2MzkuMjA1ODJ2NDMuMjk5ODRjLTE0MC4xODA0Ni0yNC45OTIxMi0xNzkuMDg2MDYtMTcwLjcwNjQxLTE3OS4wODYwNi0xNzAuNzA2NDEsMCwwLDY3LjMwMjExLTc0LjU3MDIyLDE3OS4wODYwNi04Ni42NTM0OHY0Ny41MDU2NGMtLjA4NzM5LDAtLjE0Mzk1LS4wMjItLjIxOTc2LS4wMjItNTguNjU1MzUtNy4wNDUxNi0xMDQuNDg5MTMsNDcuNzYzNjktMTA0LjQ4OTEzLDQ3Ljc2MzY5LDAsMCwyNS42NzgxLDkyLjI2MDMsMTA0LjcwODg5LDExOC44MTI3MU04MTYuMjU1Myw1MDUuNDg0ODRzODMuMDgwMy0xMjIuNTkwOTksMjQ4Ljk3MzQyLTEzNS4yNjU5NnYtNDQuNDY5NzFjLTE4My43NDI2MiwxNC43NDUyOC0zNDIuODU4OTksMTcwLjM2MjE2LTM0Mi44NTg5OSwxNzAuMzYyMTYsMCwwLDkwLjExNDEzLDI2MC41MzMxMiwzNDIuODU4OTksMjg0LjM4MzIzdi00Ny4yNzU0OGMtMTg1LjQ2ODY3LTIzLjMzNTIxLTI0OC45NzM0Mi0yMjcuNzM0MjMtMjQ4Ljk3MzQyLTIyNy43MzQyM1oiLz48L2c+PC9zdmc+"
+                  alt="NVIDIA Isaac"
+                />
+                <div>
+                  <div class="ppt-skill-head">
+                    <strong class="ppt-skill-name">Isaac Sim · Isaac Lab</strong>
+                    <span class="ppt-skill-level" aria-label="Isaac Sim 및 Isaac Lab 숙련도 2/5"><span class="on"></span><span class="on"></span><span class=""></span><span class=""></span><span class=""></span></span>
+                  </div>
+                  <ul class="ppt-skill-points">
+                    <li>로봇 시뮬레이션 환경 구축 및 제어 실습</li>
+                    <li>Sim-to-Real / Imitation Learning 구조 학습</li>
                   </ul>
                 </div>
               </article>
@@ -3251,8 +3272,8 @@
           <ul class="bullets overview-summary">
             <li>
               알약 분류와 사용자 배송 과정을 자동화하기 위해 YOLO·카메라  기반
-              3D 위치 인식과 좌표 변환을 구현하고, ROS2로 로봇팔·컨베이어·AMR을
-              연동해 인식부터 Pick &amp; Place, 배송까지 이어지는 <br />통합 로봇 시스템입니다.
+              3D 위치 인식과 좌표 변환을 <br />구현하고, ROS2로 로봇팔·컨베이어·AMR을
+              연동해 인식부터 Pick &amp; Place, 배송까지 이어지는 통합 로봇 시스템입니다.
             </li>
           </ul>
         </section>
