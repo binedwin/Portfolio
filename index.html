@@ -103,20 +103,21 @@
         padding: 30px 0 64px;
       }
       #p1 { order: 1; }
-      #p2 { order: 2; }
-      #p11 { order: 3; }
-      #p12 { order: 4; }
-      #p13 { order: 5; }
-      #p3 { order: 6; }
-      #p4 { order: 7; }
-      #p14 { order: 8; }
-      #p5 { order: 9; }
-      #p6 { order: 10; }
-      #p7 { order: 11; }
-      #p8 { order: 12; }
-      #p16 { order: 13; }
-      #p9 { order: 14; }
-      #p10 { order: 15; }
+      #p-skills { order: 2; }
+      #p2 { order: 3; }
+      #p11 { order: 4; }
+      #p12 { order: 5; }
+      #p13 { order: 6; }
+      #p3 { order: 7; }
+      #p4 { order: 8; }
+      #p14 { order: 9; }
+      #p5 { order: 10; }
+      #p6 { order: 11; }
+      #p7 { order: 12; }
+      #p8 { order: 13; }
+      #p16 { order: 14; }
+      #p9 { order: 15; }
+      #p10 { order: 16; }
       .page {
         width: 794px;
         height: 1123px;
@@ -763,6 +764,124 @@
         color: #525252;
       }
 
+      .ai-capability-section {
+        margin-bottom: 24px;
+      }
+      .ai-capability-section .section-title {
+        margin-bottom: 11px;
+      }
+      .ai-capability-lead {
+        margin: -2px 0 12px;
+        color: #475569;
+        font-size: 11.2px;
+        line-height: 1.45;
+        word-break: keep-all;
+      }
+      .ai-capability-flow {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .ai-capability-card {
+        --ai-accent: #2563eb;
+        --ai-soft: #eff6ff;
+        position: relative;
+        display: grid;
+        grid-template-columns: 104px minmax(0, 1fr);
+        gap: 14px;
+        align-items: center;
+        min-height: 66px;
+        padding: 10px 14px 10px 16px;
+        overflow: hidden;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #ffffff, var(--ai-soft));
+        box-shadow:
+          0 0 0 1px rgba(100, 116, 139, 0.14),
+          0 12px 26px -26px rgba(15, 23, 42, 0.52);
+      }
+      .ai-capability-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 4px;
+        background: var(--ai-accent);
+      }
+      .ai-capability-card:nth-child(2) {
+        --ai-accent: #7c3aed;
+        --ai-soft: #f5f3ff;
+      }
+      .ai-capability-card:nth-child(3) {
+        --ai-accent: #0f766e;
+        --ai-soft: #ecfdf5;
+      }
+      .ai-capability-head {
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 9px;
+        align-items: center;
+        align-self: stretch;
+        padding: 3px 12px 3px 1px;
+        border-right: 1px solid rgba(100, 116, 139, 0.18);
+      }
+      .ai-capability-brand {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ai-accent) 18%, transparent);
+      }
+      .ai-capability-brand img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .ai-capability-brand.developer img {
+        object-fit: cover;
+        object-position: center 18%;
+      }
+      .ai-capability-head h3 {
+        margin: 0;
+        color: #0f172a;
+        font-size: 14.5px;
+        line-height: 1.1;
+        font-weight: 750;
+        letter-spacing: -0.025em;
+      }
+      .ai-capability-points {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: #334155;
+        font-size: 10.4px;
+        line-height: 1.32;
+      }
+      .ai-capability-points li {
+        position: relative;
+        margin: 0;
+        padding-left: 10px;
+        word-break: keep-all;
+      }
+      .ai-capability-points li::before {
+        content: "";
+        position: absolute;
+        top: 0.48em;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 999px;
+        background: var(--ai-accent);
+      }
+
       .ppt-skill-board {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -803,16 +922,16 @@
         background: #ffffff;
         margin-top: 2px;
       }
-      #p2 .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) {
+      #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) {
         position: relative;
         column-gap: 9px;
       }
-      #p2 .ppt-skill-icon[alt="Git"] {
+      #p-skills .ppt-skill-icon[alt="Git"] {
         width: 13px;
         height: 13px;
         margin: 1px 0 0 1px;
       }
-      #p2 .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) .ppt-skill-name {
+      #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) .ppt-skill-name {
         font-size: 11.8px;
         line-height: 1.18;
       }
@@ -931,49 +1050,49 @@
         border-radius: 999px;
         background: #2563eb;
       }
-      #p2 .ppt-skill-board .ppt-skill-col:nth-child(2) .ppt-skill-item {
+      #p-skills .ppt-skill-board .ppt-skill-col:nth-child(2) .ppt-skill-item {
         align-items: start;
         padding-top: 8px;
         padding-bottom: 8px;
       }
-      #p2 .ppt-skill-board .ppt-skill-col:nth-child(2) .ppt-skill-icon {
+      #p-skills .ppt-skill-board .ppt-skill-col:nth-child(2) .ppt-skill-icon {
         align-self: start;
         margin-top: 2px;
       }
-      #p2 .ppt-skill-item:has(> .ppt-skill-icon[alt="C++"]) {
+      #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="C++"]) {
         grid-column: 1;
         grid-row: 1;
       }
-      #p2 .ppt-skill-item:has(> .ppt-skill-icon[alt="Python"]) {
+      #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="Python"]) {
         grid-column: 1;
         grid-row: 2;
       }
-      #p2 .ppt-skill-item:has(> .ppt-skill-icon[alt="Mysql"]) {
+      #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="Mysql"]) {
         grid-column: 1;
         grid-row: 3;
       }
-      #p2 .ppt-skill-item:has(> .ppt-skill-icon[alt="ROS2"]) {
+      #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="ROS2"]) {
         grid-column: 2;
         grid-row: 1;
       }
-      #p2 .ppt-skill-item:has(> .ppt-skill-icon[alt="Gazebo"]) {
+      #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="Gazebo"]) {
         grid-column: 2;
         grid-row: 2;
       }
-      #p2 .ppt-skill-item:has(> .ppt-skill-icon[alt="RoboDK"]) {
+      #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="RoboDK"]) {
         grid-column: 2;
         grid-row: 3;
       }
-      #p2 .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) {
+      #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) {
         grid-column: 3;
         grid-row: 1;
       }
-      #p2 .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) .ppt-skill-head {
+      #p-skills .ppt-skill-item:has(> .ppt-skill-icon[alt="Git"]) .ppt-skill-head {
         display: grid;
         gap: 4px;
         align-content: start;
       }
-      #p2 .vision-tool-card {
+      #p-skills .vision-tool-card {
         grid-column: 3;
         grid-row: 2;
       }
@@ -1815,44 +1934,90 @@
         background: rgba(248, 250, 252, 0.88);
         box-shadow: 0 0 0 1px rgba(100, 116, 139, 0.16);
       }
-      /* Keep five project summaries inside the A4 overview page. */
+      /* Keep five project summaries readable inside the A4 overview page. */
       #p2 .section {
-        margin-bottom: 22px;
+        margin-bottom: 20px;
       }
       #p2 .section-title {
-        margin-bottom: 14px;
+        margin-bottom: 13px;
       }
       #p2 .project-list {
-        gap: 8px;
+        gap: 7px;
       }
       #p2 .project-row {
-        grid-template-columns: 36px minmax(0, 1fr);
-        gap: 10px;
-        padding: 8px 11px;
-        border-radius: 13px;
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 11px;
+        align-items: start;
+        padding: 9px 12px 9px 13px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #ffffff 0%, var(--project-soft) 100%);
+        box-shadow:
+          0 0 0 1px var(--project-ring),
+          0 8px 20px -22px var(--project-shadow);
+      }
+      #p2 .project-row:before {
+        width: 3px;
       }
       #p2 .project-no {
-        width: 30px;
-        height: 30px;
-        border-radius: 10px;
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+        font-size: 11px;
+        letter-spacing: 0.02em;
+      }
+      #p2 .project-main {
+        display: grid;
+        gap: 4px;
       }
       #p2 .project-main h3 {
-        margin-bottom: 2px;
-        font-size: 14px;
+        margin: 0;
+        font-size: 14.1px;
+        line-height: 1.25;
+        font-weight: 750;
+        color: #0f172a;
+      }
+      #p2 .project-main h3 .note {
+        margin-left: auto;
+        padding: 3px 7px;
+        background: var(--project-accent);
+        color: #ffffff;
+        box-shadow: none;
+        font-size: 9.8px;
+        letter-spacing: 0.02em;
       }
       #p2 .project-main p {
-        margin-bottom: 5px;
+        margin: 0;
         font-size: 11.5px;
-        line-height: 1.32;
+        line-height: 1.38;
+        color: #475569;
       }
       #p2 .project-meta {
         display: grid;
-        grid-template-columns: max-content max-content;
-        justify-content: start;
-        font-size: 10.5px;
+        grid-template-columns: minmax(0, 1fr) max-content;
+        gap: 6px;
+        font-size: 10.3px;
+        line-height: 1.3;
       }
       #p2 .project-meta span {
-        padding: 2px 7px;
+        display: inline-flex;
+        align-items: center;
+        min-height: 23px;
+        padding: 3px 7px;
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: inset 0 0 0 1px rgba(100, 116, 139, 0.15);
+      }
+      #p2 .project-meta span:nth-child(2) {
+        white-space: nowrap;
+      }
+      #p2 .project-meta b {
+        flex: 0 0 auto;
+        margin-right: 6px;
+        padding-right: 6px;
+        border-right: 1px solid rgba(100, 116, 139, 0.2);
+        color: var(--project-accent);
+        font-size: 9.7px;
+        letter-spacing: 0.025em;
       }
       #p2 .project-meta .tech-stack {
         grid-column: 1 / -1;
@@ -2580,7 +2745,8 @@
       <div class="toolbar-inner">
         <strong>이정빈 · Robot Software Developer Portfolio</strong
         ><span
-          ><a href="#p1">Profile</a><a href="#p2">Projects</a
+          ><a href="#p1">Profile</a><a href="#p-skills">Skills</a
+          ><a href="#p2">Projects</a
           ><a href="#p11">P1</a><a href="#p3">P2</a><a href="#p5">P3</a
           ><a href="#p7">P4</a><a href="#p9">P5</a></span
         >
@@ -2793,7 +2959,7 @@
               <div class="project-main">
                 <h3>
                   ROS2 기반 알약 분류 및 자율 배달 로봇
-                  <span class="note">6-8p</span>
+                  <span class="note">7-9p</span>
                 </h3>
                 <p>
                   카메라 3D 좌표 변환부터 ROS2 기반 Pick &amp; Place, AMR 배송까지
@@ -2802,14 +2968,14 @@
                 <div class="project-meta">
                   <span><b>역할</b>비전-제어 연동 및 Pick &amp; Place 구현</span
                   ><span><b>기간</b>2026.05-2026.06</span
-                  ><span class="tech-stack"><b>기술</b>ROS 2 · YOLO · OpenCV · RealSense · Dobot · TurtleBot · Gazebo</span>
+                  ><span class="tech-stack"><b>기술</b>ROS 2 · YOLO · OpenCV · RealSense · Dobot · TurtleBot · Gazebo · Raspberry Pi 5</span>
                 </div>
               </div>
             </article>
             <article class="project-row">
               <div class="project-no">03</div>
               <div class="project-main">
-                <h3>수도관 누수 지점 예측 AI <span class="note">9-10p</span></h3>
+                <h3>수도관 누수 지점 예측 AI <span class="note">10-11p</span></h3>
                 <p>
                   AI HUB 센서 데이터 신뢰성을 검증하고 KNN 93.56% 정확도로 누수
                   지점을 예측한 AI 모델
@@ -2825,7 +2991,7 @@
               <div class="project-no">05</div>
               <div class="project-main">
                 <h3>
-                  RAG-Vision 치매 예방 챗봇 <span class="note">14-15p</span>
+                  RAG-Vision 치매 예방 챗봇 <span class="note">15-16p</span>
                 </h3>
                 <p>
                   RAG와 Vision AI를 결합해 과거 기억 회상과 음성 대화를 지원한
@@ -2834,14 +3000,14 @@
                 <div class="project-meta">
                   <span><b>역할</b>RAG 적용 및 Vision AI 기능 연동</span
                   ><span><b>기간</b>2025.07-2025.12</span
-                  ><span class="tech-stack"><b>기술</b>React · FastAPI · RAG · Gemini · YOLOv8n · CLIP · STT/TTS</span>
+                  ><span class="tech-stack"><b>기술</b>React · FastAPI · RAG · Gemini API· YOLOv8n · CLIP · STT/TTS</span>
                 </div>
               </div>
             </article>
             <article class="project-row">
               <div class="project-no">04</div>
               <div class="project-main">
-                <h3>AI 동물 캐릭터 생성 서비스 <span class="note">11-13p</span></h3>
+                <h3>AI 동물 캐릭터 생성 서비스 <span class="note">12-14p</span></h3>
                 <p>
                   얼굴 특징 분석과 생성형 AI를 결합해 개인 맞춤형 동물 캐릭터
                   도안을 생성한 서비스
@@ -2849,7 +3015,7 @@
                 <div class="project-meta">
                   <span><b>역할</b>CV·생성형 AI 서비스 구현</span
                   ><span><b>기간</b>2025.03-2025.06</span
-                  ><span class="tech-stack"><b>기술</b>Vite · React · Flask · MediaPipe · FaceMesh · ResNet34 · Gemini</span>
+                  ><span class="tech-stack"><b>기술</b>Vite · React · Flask · MediaPipe · FaceMesh · ResNet34 · Gemini API</span>
                 </div>
               </div>
             </article>
@@ -2858,7 +3024,7 @@
               <div class="project-main">
                 <h3>
                   ROS2 기반 Tendon-Driven 다관절 로봇 손
-                  <span class="note">3-5p</span>
+                  <span class="note">4-6p</span>
                 </h3>
                 <p>
                   손 랜드마크를 7축 명령으로 변환해 로봇 손을 제어하고 동작
@@ -2867,9 +3033,61 @@
                 <div class="project-meta">
                   <span><b>역할</b>EMB/AI · Vision AI 및 시스템 통합</span
                   ><span><b>기간</b>2026.07-2026.08</span
-                  ><span class="tech-stack"><b>기술</b>ROS 2 · CycloneDDS · MediaPipe · OpenCV · Jetson · DYNAMIXEL · React</span>
+                  ><span class="tech-stack"><b>기술</b>ROS 2 · MediaPipe · OpenCV · MJPEG · Jetson · Raspberry Pi 5 · Linux</span>
                 </div>
               </div>
+            </article>
+          </div>
+        </section>
+        <div class="page-number">- 3 -</div>
+      </section>
+      <section class="page skills-page" id="p-skills">
+        <section class="section ai-capability-section">
+          <h2 class="section-title purple">AI 활용 역량</h2>
+          <p class="ai-capability-lead">
+            AI는 아이디어와 구현 속도를 높이는 도구로 활용하고, 최종 판단은 직접 실행·테스트한 결과를 기준으로 내립니다.
+          </p>
+          <div class="ai-capability-flow">
+            <article class="ai-capability-card">
+              <div class="ai-capability-head">
+                <span class="ai-capability-brand">
+                  <img src="image/hermes-agent-icon.png" alt="Hermes Agent 공식 아이콘" />
+                </span>
+                <h3>Hermes</h3>
+              </div>
+              <ul class="ai-capability-points">
+                <li>요구사항·문제 상황을 바탕으로 아이디어 후보 도출</li>
+                <li>적용 가능한 기술 스택·구현 방향 비교</li>
+                <li>차별화 포인트 구체화 및 핵심 문제 정의</li>
+              </ul>
+            </article>
+            <article class="ai-capability-card">
+              <div class="ai-capability-head">
+                <span class="ai-capability-brand">
+                  <img src="image/codex-app-icon.png" alt="OpenAI Codex 앱 아이콘" />
+                </span>
+                <h3>Codex</h3>
+              </div>
+              <ul class="ai-capability-points">
+                <li>기존 코드 구조 파악 및 개선 지점 탐색</li>
+                <li>기능 구현과 반복 코드 작성 지원</li>
+                <li>오류 로그 기반 원인 후보 분석·디버깅</li>
+                <li>리팩토링을 통한 가독성·유지보수성 개선</li>
+              </ul>
+            </article>
+            <article class="ai-capability-card">
+              <div class="ai-capability-head">
+                <span class="ai-capability-brand developer">
+                  <img src="image/프로필 흰배경.png" alt="Developer 이정빈" />
+                </span>
+                <h3>Developer</h3>
+              </div>
+              <ul class="ai-capability-points">
+                <li>실제 요구사항과 제약조건 명확화</li>
+                <li>AI 제안을 실행·테스트로 검증</li>
+                <li>기술 대안을 비교해 프로젝트에 적합한 방식 선택</li>
+                <li>최종 아키텍처·구현 방식·적용 범위 결정</li>
+              </ul>
             </article>
           </div>
         </section>
@@ -3979,6 +4197,7 @@
 
         const orderedPageIds = [
           "p1",
+          "p-skills",
           "p2",
           "p11",
           "p12",
